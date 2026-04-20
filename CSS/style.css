@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+
+:root {
+  --tamanho-header: 80px;
+  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-footer: 65px;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.header {
+  height: 80px;
+  background-color: #E60012;
+  border-bottom: 2px solid black;
+}
+
+.header .container {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.agora {
+  font-weight: 800;
+}
+
+.navbar {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: #e3b062;
+}
+
+.titulo {
+  color: white;
+  width: fit-content;
+  font-weight: 500;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+
+/* FOOTER */
+
+.footer {
+  background-color: #00C3E3;
+  height: 80px;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  border-top: 2px solid black;
+
+}
+
+.footer .container {
+  justify-content: center;
+  text-align: center;
+}
+
+/* LOGIN */
+
+.login {
+  height: var(--tamanho-login);
+}
+
+.titulo-form {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.login .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+
+/* O corpo principal do Switch */
+.card {
+    width: 70%; /* Aumentamos um pouco para caber os controles */
+    display: flex;
+    height: 400px;
+    padding: 0; /* Removemos o padding para os controles colarem nas bordas */
+    border-radius: 40px; /* Arredondamento geral */
+    overflow: hidden; /* Garante que o conteúdo não saia das bordas arredondadas */
+    
+}
+
+/* Joy-con Esquerdo (Azul) */
+.lado.esquerdo {
+    width: 20%;
+    background-color: #00C3E3; 
+    border-radius: 40px 0 0 40px; /* Arredonda apenas os cantos da esquerda */
+    border-right: 5px solid #333; /* Linha que separa o controle da tela */
+}
+
+/* A "Tela" do Switch (Centro) */
+.centro {
+    width: 60%;
+    background-color: #1a1a1a; /* Preto fosco para parecer uma tela desligada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Texto branco para contrastar com a tela preta */
+}
+
+/* Joy-con Direito (Vermelho) */
+.lado.direito {
+    width: 20%;
+    background-color: #E60012;
+    border-radius: 0 40px 40px 0; /* Arredonda apenas os cantos da direita */
+    border-left: 5px solid #333; /* Linha que separa o controle da tela */
+}
+
+/* Reaproveitando o estilo do console */
+.card-cadastro {
+    height: var(--tamanho-login);
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+/* Ajustando a "Tela" para muitos inputs */
+.card-cadastro .centro {
+    background-color: #1a1a1a;
+}
+
+/* Estilizando o formulário interno */
+.card-cadastro .formulario {
+    gap: 8px; /* Diminuímos o espaço entre os campos para caberem */
+}
+
+.card-cadastro span {
+    color: white; /* Labels em azul para combinar com o Switch */
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.formulario input {
+  border: 2px solid #32b9cd;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.formulario select {
+  border: 2px solid #32b9cd;
+  background-color: white;
+  color: gray;
+  height: 36px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 5px 0;
+}
+
+.botao {
+  cursor: pointer;
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ED145B;
+  width: 120px;
+  height: 30px;
+  align-self: center;
+  margin-top: 20px;
+}
+
+
+/* FORMULARIO */
+
+.formulario .tipo_campo {
+  font-size: 20px;
+  font-weight: 600 !important;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 10px;
+  border: 2px solid #32b9cd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.btn {
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #ED145B;
+  width: 120px;
+  align-self: center;
+  margin-top: 5px;
+}
+
+.loading-div {
+  width: 50px;
+  margin: auto;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
+
