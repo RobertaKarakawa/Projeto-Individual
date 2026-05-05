@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('../IMGS/fundoMario.png');
-  background-color: white;
+  /*background-image: url('../IMGS/fundoMario.png');*/
+  background-color: #121212;
 
 }
 
@@ -31,8 +31,8 @@ body {
 
 .header {
   height: 80px;
-  background-color: #E60012;
-  border-bottom: 2px solid black;
+  background-color: black;
+  border-bottom: 5px solid #E60012;
 }
 
 .header .container {
@@ -55,8 +55,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  list-style: none;
-  color: #e3b062;
+  list-style: none;}
+
+.navbar a{
+  padding-right: 25px;
 }
 
 .titulo {
@@ -73,12 +75,12 @@ body {
 /* FOOTER */
 
 .footer {
-  background-color: #00C3E3;
+  background-color: black;
   height: 80px;
   color: #fff;
   display: flex;
   font-size: 15px;
-  border-top: 2px solid black;
+  border-top: 5px solid #00C3E3;
 
 }
 
@@ -86,6 +88,111 @@ body {
   justify-content: center;
   text-align: center;
 }
+
+/* HOME */
+
+.hero {
+  height: 100vh;
+  background: url("../IMGS/nintendo.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
+}
+
+.card{
+    width: 1300px;
+    height: 350px;
+
+    border: 3px solid #E60012;
+
+    border-radius: 40px;
+
+    margin: 50px auto;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.imagem img{
+    width: 500px;
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+.texto{
+    flex: 1;
+    text-align: center;
+}
+
+.texto h1{
+    font-size: 50px;
+    margin-bottom: 25px;
+    color: white;
+
+}
+
+.texto p{
+    font-size: 25px;
+    line-height: 1.4;
+    color: white;
+
+}
+
+
+.modos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.switch{
+    width: 320px;
+    text-align: center;
+    border: 3px solid #E60012;
+    border-radius: 40px;
+    padding: 10px;
+
+
+}
+
+.switch img{
+    width: 310px;
+    height: 137.38px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  border-radius: 25px;
+}
+
+.switch h2{
+    margin-bottom: 15px;
+    font-size: 32px;
+    color: white;
+}
+
+.switch p{
+    font-size: 16px;
+    line-height: 1.7;
+    color: white;
+    padding-right: 25px;
+    padding-left: 25px;
+
+}
+
 
 /* LOGIN E CADASTRO */
 
@@ -96,7 +203,8 @@ body {
 .titulo-form {
   text-align: center;
   margin-bottom: 20px;
-  color: black;
+  color: white;
+  font-weight: 1000;
 }
 
 .console .container {
@@ -109,20 +217,22 @@ body {
 
 
 .corpo {
-    width: 70%; /* Aumentamos um pouco para caber os controles */
+    width: 70%; 
     display: flex;
     height: 400px;
-    padding: 0; /* Removemos o padding para os controles colarem nas bordas */
-    border-radius: 40px; /* Arredondamento geral */
-    overflow: hidden; /* Garante que o conteúdo não saia das bordas arredondadas */
+    padding: 0; 
+    border-radius: 40px; 
+    overflow: hidden; 
     
 }
 
 .lado.esquerdo {
     width: 20%;
     background-color: #00C3E3; 
-    border-radius: 40px 0 0 40px; /* Arredonda apenas os cantos da esquerda */
+    border-radius: 40px 0 0 40px; 
     border-right: 5px solid #333; 
+    border: 3px solid #3b82f6;
+
 }
 
 .centro {
@@ -133,13 +243,16 @@ body {
     align-items: center;
     justify-content: center;
     color: white; 
+    border: 3px solid black;
+
 }
 
 .lado.direito {
     width: 20%;
     background-color: #E60012;
     border-radius: 0 40px 40px 0; /* Arredonda apenas os cantos da direita */
-    border-left: 5px solid #333; 
+    border-left: 5px solid #333;
+    border: 3px solid #ff7a00;
 }
 
 
