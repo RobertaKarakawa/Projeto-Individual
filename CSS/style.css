@@ -113,8 +113,6 @@ body {
 
     border: 3px solid #E60012;
 
-    border-radius: 40px;
-
     margin: 50px auto;
     padding: 25px;
 
@@ -129,7 +127,6 @@ body {
 
     object-fit: cover;
 
-    border-radius: 25px;
 }
 
 .texto{
@@ -164,7 +161,6 @@ body {
     width: 320px;
     text-align: center;
     border: 3px solid #E60012;
-    border-radius: 40px;
     padding: 10px;
 
 
@@ -175,7 +171,6 @@ body {
     height: 137.38px;
     margin-bottom: 20px;
     object-fit: cover;
-  border-radius: 25px;
 }
 
 .switch h2{
@@ -193,6 +188,162 @@ body {
 
 }
 
+.sensor{
+    width: 1100px;
+    height: 500px;
+
+    border: 3px solid #E60012;
+    
+
+    margin: 50px auto;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sensor img{
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+}
+
+.sensor h2{
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    font-size: 32px;
+    color: white;
+}
+
+.sensor p{
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+.jogos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.jogos h1{
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.card-jogo{
+    width: 1300px;
+    height: 620px;
+
+    border: 3px solid  #32b9cd;
+
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.card-jogo img{
+    width: 700px;
+    height: 620px;
+
+    object-fit: cover;
+
+}
+
+.texto{
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+
+.texto h2{
+    font-size: 45px;
+    margin-bottom: 0.5px;
+}
+
+.texto p{
+    font-size: 24px;
+    line-height: 1.5;
+    
+}
+
+.reverso{
+    flex-direction: row-reverse;
+}
+
+
+.outros{
+    width: 100%;
+    padding: 30px 0 60px;
+}
+
+.outros h1{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.games{
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.game{
+    width: 240px;
+    background-color: #ececec;
+
+    transition: 0.3s;
+}
+
+.game:hover{
+    transform: translateY(-10px);
+}
+
+.game img{
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+}
+
+.info{
+    padding: 15px;
+}
+
+.info h2{
+    font-size: 18px;
+    margin: 0 0 10px;
+    line-height: 1.4;
+    color: #3a3a3a;
+}
+
+.info span{
+    font-size: 16px;
+    color: #6b6b6b;
+}
 
 /* LOGIN E CADASTRO */
 

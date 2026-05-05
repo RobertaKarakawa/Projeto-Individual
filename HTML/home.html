@@ -95,6 +95,133 @@
 
 </section>
 
+<div class="sensor">
+    <img src="../IMGS/sensor.jpg">
+    <h2>Sensores de Movimento</h2>
+    <p>
+     Os Joy-Cons do Nintendo Switch possuem sensores de movimento que tornam a jogabilidade mais interativa e imersiva! 
+     Com essa tecnologia, os movimentos do jogador são detectados em tempo real, permitindo experiências mais dinâmicas em 
+     jogos de dança, esportes, aventura e multiplayer. Essa funcionalidade ajuda a tornar o Nintendo Switch único, aproximando 
+     ainda mais o jogador da ação dentro do jogo.
+    </p>
+  </div>
+
+<section class="jogos">
+  <h1>JOGOS ICÔNICOS</h1>
+
+  <div class="card-jogo">
+    <img id="img_sports" src="../IMGS/sports.avif">
+
+    <div class="texto">
+      <h2>Nintendo Switch Sports</h2>
+
+      <p>
+        Transforme sua sala em uma verdadeira arena esportiva com Nintendo Switch Sports! Balance, chute, saque, 
+        corte e dispute partidas eletrizantes usando os movimentos naturais dos controles Joy-Con, trazendo uma sensação
+         de imersão única que faz você se sentir dentro do jogo.<br><br>
+
+Com esportes como futebol, vôlei, boliche, tênis, badminton, golfe, basquete e chambara, a diversão fica ainda melhor ao lado de 
+amigos e família, seja no mesmo console ou em partidas online contra jogadores do mundo inteiro. Cada desafio rende recompensas, itens 
+exclusivos e novas formas de personalizar seu avatar enquanto você sobe nas ligas competitivas e prova suas habilidades em quadra.
+
+      </p>
+    </div>
+  </div>
+
+  <div class="card-jogo reverso">
+    <img id="img_party" src="../IMGS/MPJ.avif">
+
+    <div class="texto">
+      <h2>Super Mario Party Jamboree</h2>
+
+      <p>
+       Os jogadores percorrem enormes tabuleiros inspirados no universo Mario, usando dados para avançar pelas casas, coletar 
+       moedas e conquistar estrelas enquanto enfrentam eventos inesperados a cada rodada!<br>
+
+Ao final de cada turno, todos participam de minigames rápidos e criativos que testam reflexos, trabalho em equipe, velocidade e
+ até movimentos com os Joy-Cons, tornando cada partida muito mais dinâmica e imersiva. Além do modo clássico de tabuleiro, o jogo
+  também traz desafios online, modos cooperativos e várias formas diferentes de jogar, garantindo partidas sempre imprevisíveis e 
+  divertidas com amigos e família.
+      </p>
+    </div>
+  </div>
+
+   <div class="card-jogo">
+    <img id="img_kart" src="../IMGS/mariok.avif">
+
+    <div class="texto">
+      <h2>Mario Kart 8 Deluxe</h2>
+
+      <p>
+        Sinta a emoção de entrar nas pistas em Mario Kart 8 Deluxe usando os controles Joy-Con como verdadeiros volantes! 
+        Com os sensores de movimento do Nintendo Switch, cada curva, derrapagem e ultrapassagem fica muito mais imersiva, 
+        fazendo você se sentir dentro de uma corrida intensa ao lado dos personagens mais icônicos do universo Mario.<br>
+
+As corridas ganham ainda mais diversão com pistas criativas, itens imprevisíveis e disputas frenéticas que podem mudar completamente 
+nos últimos segundos. No multiplayer local ou online, basta separar os Joy-Cons, entregar um para um amigo e transformar qualquer lugar
+ em uma competição cheia de velocidade, risadas e rivalidade.
+
+
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="outros">
+
+    <h1>ENTRE MUITOS OUTROS</h1>
+
+    <div class="games">
+
+        <div class="game">
+            <img src="../IMGS/Animal-Crossing-New-Horizons.jpg" >
+
+            <div class="info">
+                <h2>Animal Crossing: New Horizons</h2>
+                <span>Simulação de vida</span>
+            </div>
+        </div>
+
+        <div class="game">
+            <img src="../IMGS/The_Legend_of_Zelda_Breath_of_the_Wild.jpg">
+
+            <div class="info">
+                <h2>The Legend of Zelda: Breath of the Wild</h2>
+                <span>Ação e aventura</span>
+            </div>
+        </div>
+
+        <div class="game">
+            <img src="../IMGS/odyssey.avif" >
+
+            <div class="info">
+                <h2>Super Mario Odyssey</h2>
+                <span>Plataforma 3D</span>
+            </div>
+        </div>
+
+        <div class="game">
+            <img src="../IMGS/pokemon.jpeg">
+
+            <div class="info">
+                <h2>Pokémon Legends: Arceus</h2>
+                <span>RPG</span>
+            </div>
+        </div>
+
+        <div class="game">
+            <img src="../IMGS/justDance.jpeg">
+
+            <div class="info">
+                <h2>Just Dance 2025 Edition</h2>
+                <span>Ritmo / música</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
   
     <div class="footer">
       <div class="container">
@@ -104,3 +231,79 @@
   </body>
 
 </html>
+
+<script>
+
+var sports = [
+    "../IMGS/sports.avif",
+    "../IMGS/volei.avif",
+    "../IMGS/fut.avif",
+    "../IMGS/boliche.avif",
+    "../IMGS/chambara.avif",
+    "../IMGS/tenis.avif",
+    "../IMGS/badmin.avif"
+
+];
+
+var indice = 0;
+
+setInterval(() => {
+
+    indice++;
+
+    if(indice >= sports.length){
+        indice = 0;
+    }
+
+    document.getElementById("img_sports").src = sports[indice];
+
+}, 3000);
+
+var party = [
+    "../IMGS/MPJ.avif",
+    "../IMGS/tabuleiro.avif",
+    "../IMGS/dado.jpg",
+    "../IMGS/martelo.avif",
+    "../IMGS/cook.jpg",
+    "../IMGS/110.avif"
+];
+
+var contador = 0;
+
+setInterval(() => {
+
+    contador++;
+
+    if(contador >= party.length){
+        contador = 0;
+    }
+
+    document.getElementById("img_party").src = party[contador];
+
+}, 3000);
+
+var kart = [
+    "../IMGS/mariok.avif",
+    "../IMGS/personagens.webp",
+    "../IMGS/jogandoMK.jpg",
+    "../IMGS/balao.avif",
+    "../IMGS/volante.jpg",
+    "../IMGS/super.webp"
+
+];
+
+var somador = 0;
+
+setInterval(() => {
+
+    somador++;
+
+    if(somador >= kart.length){
+        somador = 0;
+    }
+
+    document.getElementById("img_kart").src = kart[somador];
+
+}, 3000);
+
+</script>
