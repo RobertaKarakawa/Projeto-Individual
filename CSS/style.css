@@ -3,8 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /*background-image: url('../IMGS/fundoMario.png');*/
+  font-family: 'Barlow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
 
 }
@@ -114,11 +113,14 @@ body {
     border: 3px solid #E60012;
 
     margin: 50px auto;
-    padding: 25px;
 
     display: flex;
     align-items: center;
     gap: 30px;
+
+    overflow: hidden;
+    box-shadow: 0 0 25px #E60012;
+
 }
 
 .imagem img{
@@ -132,6 +134,8 @@ body {
 .texto{
     flex: 1;
     text-align: center;
+    padding: 25px;
+
 }
 
 .texto h1{
@@ -161,13 +165,14 @@ body {
     width: 320px;
     text-align: center;
     border: 3px solid #E60012;
-    padding: 10px;
 
+    overflow: hidden;
+    box-shadow: 0 0 25px #E60012;
 
 }
 
 .switch img{
-    width: 310px;
+    width: 318px;
     height: 137.38px;
     margin-bottom: 20px;
     object-fit: cover;
@@ -190,17 +195,18 @@ body {
 
 .sensor{
     width: 1100px;
-    height: 500px;
+    height: auto;
 
     border: 3px solid #E60012;
     
 
     margin: 50px auto;
-    padding: 10px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+  box-shadow: 0 0 25px #E60012;
 }
 
 .sensor img{
@@ -226,6 +232,7 @@ body {
     color: white;
 
     text-align: center;
+    padding: 10px;
 
 }
 
@@ -264,21 +271,21 @@ body {
     height: 620px;
 
     object-fit: cover;
-
+  box-shadow: 0 0 25px #00C3E3;
 }
 
-.texto{
+.texto-card{
     flex: 1;
     text-align: center;
     color: white;
 }
 
-.texto h2{
+.texto-card h2{
     font-size: 45px;
     margin-bottom: 0.5px;
 }
 
-.texto p{
+.texto-card p{
     font-size: 24px;
     line-height: 1.5;
     
@@ -348,7 +355,14 @@ body {
 /* LOGIN E CADASTRO */
 
 .console {
-  height: var(--tamanho-login);
+    height: var(--tamanho-login);
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('../IMGS/fdMario2.jpg');
+
+    background-size: cover;
+    background-position: center;
 }
 
 .titulo-form {
@@ -356,6 +370,10 @@ body {
   margin-bottom: 20px;
   color: white;
   font-weight: 1000;
+
+   text-shadow:
+    0 0 5px #fff,
+    0 0 40px #fff;
 }
 
 .console .container {
@@ -373,7 +391,9 @@ body {
     height: 400px;
     padding: 0; 
     border-radius: 40px; 
-    overflow: hidden; 
+    overflow: visible; 
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+
     
 }
 
@@ -381,8 +401,8 @@ body {
     width: 20%;
     background-color: #00C3E3; 
     border-radius: 40px 0 0 40px; 
-    border-right: 5px solid #333; 
     border: 3px solid #3b82f6;
+    box-shadow: 0 0 30px #00C3E3;
 
 }
 
@@ -401,9 +421,10 @@ body {
 .lado.direito {
     width: 20%;
     background-color: #E60012;
-    border-radius: 0 40px 40px 0; /* Arredonda apenas os cantos da direita */
-    border-left: 5px solid #333;
+    border-radius: 0 40px 40px 0; 
     border: 3px solid #ff7a00;
+    box-shadow: 0 0 30px #E60012;
+
 }
 
 
