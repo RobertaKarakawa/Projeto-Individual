@@ -463,12 +463,18 @@ input {
 #mensagem_erro{
     margin-top: 15px;
 
-    color: #ff4d4d;
-
     font-size: 15px;
     font-weight: bold;
 
     text-align: center;
 
     min-height: 20px;
+}
+
+.erro{
+    color: #ff4d4d;
+}
+
+.sucesso{
+    color: #00ff88;
 }

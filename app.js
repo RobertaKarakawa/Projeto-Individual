@@ -15,21 +15,18 @@ var HOST_APP = process.env.APP_HOST;
 
 var app = express();
 
-var indexRouter = require("./SRC/ROUTES/index");
-var usuarioRouter = require("./SRC/ROUTES/usuarios");
-var avisosRouter = require("./ROUTES/avisos");
-var medidasRouter = require("./SRC/ROUTES/medidas");
+var usuarioRouter = require("./ROUTES/usuarios");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname)));
+app.get("/", function(req, res){
+    res.sendFile(path.join(__dirname, "HTML/home.html"));
+});
 
 app.use(cors());
 
-app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
-app.use("/avisos", avisosRouter);
-app.use("/medidas", medidasRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`

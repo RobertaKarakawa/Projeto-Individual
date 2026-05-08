@@ -7,6 +7,8 @@
 
     <title>Nintendo Switch | Login</title>
 
+    <script src="./js/sessao.js"></script>
+
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="../IMGS/icon.png">
 </head>
@@ -20,16 +22,16 @@
             <h1 class="titulo">Nintendo Switch</h1>
             <ul class="navbar">
                 <li>
-                    <a href="home.html">Home</a>
+                    <a href="/HTML/home.html">Home</a>
                 </li>
                 <li>
-            <a href="dashboard.html">Dashboard</a>
+            <a href="/HTML/dashboard.html">Dashboard</a>
           </li>
                 <li class="agora">
                     <a href="#">Login</a>
                 </li>
                 <li>
-                    <a href="cadastro.html">Cadastro</a>
+                    <a href="/HTML/cadastro.html">Cadastro</a>
                 </li>
             </ul>
         </div>
@@ -62,6 +64,7 @@
                         </div>
 
                         <button class="botao" onclick="entrar()">Entrar</button>
+                        <div id="mensagem_erro"></div>
                     </div>
                 </div>
 
@@ -86,5 +89,106 @@
     <!--footer fim-->
 
 </body>
+
+<script>
+
+function entrar() {
+
+    mensagem_erro.innerHTML = "";
+
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+
+    if (emailVar == "" || senhaVar == "") {
+
+        mensagem_erro.className = "erro";
+        mensagem_erro.innerHTML = "Preencha todos os campos!";
+
+        return false;
+    }else {
+
+    setInterval(sumirMensagem, 5000);
+}
+
+    if (!emailVar.includes("@")) {
+
+        mensagem_erro.className = "erro";
+        mensagem_erro.innerHTML = "E-mail inválido!";
+
+        return false;
+    }
+
+    console.log("FORM LOGIN:", emailVar);
+    console.log("FORM SENHA:", senhaVar);
+
+    fetch("/usuarios/autenticar", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            emailServer: emailVar,
+            senhaServer: senhaVar
+        })
+
+    })
+
+    .then(function (resposta) {
+
+        console.log("ESTOU NO THEN DO entrar()!");
+        console.log("resposta:", resposta);
+
+        if (resposta.ok) {
+
+            resposta.json().then(json => {
+
+                console.log(json);
+                console.log(JSON.stringify(json));
+
+                sessionStorage.EMAIL_USUARIO = json.email;
+                sessionStorage.NOME_USUARIO = json.omeUsuario;
+                sessionStorage.ID_USUARIO = json.idUsuario;
+
+                mensagem_erro.className = "sucesso";
+                mensagem_erro.innerHTML = "Login realizado com sucesso!";
+
+                setTimeout(() => {
+
+                    window.location = "/HTML/game.html";
+
+                }, 1000);
+
+            });
+
+        } else {
+
+            console.log("Houve um erro ao tentar realizar o login!");
+
+            mensagem_erro.className = "erro";
+            mensagem_erro.innerHTML = "E-mail ou senha inválidos!";
+        }
+
+    })
+
+    .catch(function (erro) {
+
+        console.log(`#ERRO: ${erro}`);
+
+        mensagem_erro.className = "erro";
+        mensagem_erro.innerHTML = "Erro no servidor!";
+    });
+
+    return false;
+}
+
+function sumirMensagem() {
+
+    mensagem_erro.innerHTML = "";
+}
+
+</script>
 
 </html>
