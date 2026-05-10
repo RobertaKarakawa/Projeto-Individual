@@ -1,107 +1,108 @@
 /* GERAL */
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Barlow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212;
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
 
 }
 
 :root {
-  --tamanho-header: 80px;
-  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-footer: 65px;
+    --tamanho-header: 80px;
+    --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-footer: 65px;
 }
 
 
 /* HEADER */
 
 .container {
-  display: flex;
-  width: 80%;
-  margin: auto;
+    display: flex;
+    width: 80%;
+    margin: auto;
 }
 
 .header {
-  height: 80px;
-  background-color: black;
-  border-bottom: 5px solid #E60012;
+    height: 80px;
+    background-color: black;
+    border-bottom: 5px solid #E60012;
 }
 
 .header .container {
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 
 .header a {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 
 .agora {
-  font-weight: 800;
+    font-weight: 800;
 }
 
 .navbar {
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;}
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
 
-.navbar a{
-  padding-right: 25px;
+.navbar a {
+    padding-right: 25px;
 }
 
 .titulo {
-  color: white;
-  width: fit-content;
-  font-weight: 500;
+    color: white;
+    width: fit-content;
+    font-weight: 500;
 }
 
 .header h1 {
-  margin: 0;
+    margin: 0;
 }
 
 
 /* FOOTER */
 
 .footer {
-  background-color: black;
-  height: 80px;
-  color: #fff;
-  display: flex;
-  font-size: 15px;
-  border-top: 5px solid #00C3E3;
+    background-color: black;
+    height: 80px;
+    color: #fff;
+    display: flex;
+    font-size: 15px;
+    border-top: 5px solid #00C3E3;
 
 }
 
 .footer .container {
-  justify-content: center;
-  text-align: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* HOME */
 
 .hero {
-  height: 100vh;
-  background: url("../IMGS/nintendo.avif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    height: 100vh;
+    background: url("../IMGS/nintendo.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
 
 }
 
-.card{
+.card {
     width: 1300px;
     height: 350px;
 
@@ -118,7 +119,7 @@ body {
 
 }
 
-.imagem img{
+.imagem img {
     width: 500px;
     height: 350px;
 
@@ -126,21 +127,21 @@ body {
 
 }
 
-.texto{
+.texto {
     flex: 1;
     text-align: center;
     padding: 25px;
 
 }
 
-.texto h1{
+.texto h1 {
     font-size: 50px;
     margin-bottom: 25px;
     color: white;
 
 }
 
-.texto p{
+.texto p {
     font-size: 25px;
     line-height: 1.4;
     color: white;
@@ -148,7 +149,7 @@ body {
 }
 
 
-.modos{
+.modos {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -156,7 +157,7 @@ body {
     flex-wrap: wrap;
 }
 
-.switch{
+.switch {
     width: 320px;
     text-align: center;
     border: 3px solid #E60012;
@@ -166,20 +167,20 @@ body {
 
 }
 
-.switch img{
+.switch img {
     width: 318px;
     height: 137.38px;
     margin-bottom: 20px;
     object-fit: cover;
 }
 
-.switch h2{
+.switch h2 {
     margin-bottom: 15px;
     font-size: 32px;
     color: white;
 }
 
-.switch p{
+.switch p {
     font-size: 16px;
     line-height: 1.7;
     color: white;
@@ -188,12 +189,12 @@ body {
 
 }
 
-.sensor{
+.sensor {
     width: 1100px;
     height: auto;
 
     border: 3px solid #E60012;
-    
+
 
     margin: 50px auto;
 
@@ -201,10 +202,10 @@ body {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-  box-shadow: 0 0 25px #E60012;
+    box-shadow: 0 0 25px #E60012;
 }
 
-.sensor img{
+.sensor img {
     width: 100%;
     height: 300px;
 
@@ -212,7 +213,7 @@ body {
 
 }
 
-.sensor h2{
+.sensor h2 {
     margin-top: 20px;
     margin-bottom: 5px;
 
@@ -220,7 +221,7 @@ body {
     color: white;
 }
 
-.sensor p{
+.sensor p {
     font-size: 18px;
     line-height: 1.7;
 
@@ -232,7 +233,7 @@ body {
 }
 
 
-.jogos{
+.jogos {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -240,18 +241,18 @@ body {
     gap: 60px;
 }
 
-.jogos h1{
+.jogos h1 {
     font-size: 60px;
     font-weight: bold;
     margin: 0;
     color: white;
 }
 
-.card-jogo{
+.card-jogo {
     width: 1300px;
     height: 620px;
 
-    border: 3px solid  #32b9cd;
+    border: 3px solid #32b9cd;
 
     padding: 30px;
 
@@ -261,49 +262,49 @@ body {
     gap: 50px;
 }
 
-.card-jogo img{
+.card-jogo img {
     width: 700px;
     height: 620px;
 
     object-fit: cover;
-  box-shadow: 0 0 25px #00C3E3;
+    box-shadow: 0 0 25px #00C3E3;
 }
 
-.texto-card{
+.texto-card {
     flex: 1;
     text-align: center;
     color: white;
 }
 
-.texto-card h2{
+.texto-card h2 {
     font-size: 45px;
     margin-bottom: 0.5px;
 }
 
-.texto-card p{
+.texto-card p {
     font-size: 24px;
     line-height: 1.5;
-    
+
 }
 
-.reverso{
+.reverso {
     flex-direction: row-reverse;
 }
 
 
-.outros{
+.outros {
     width: 100%;
     padding: 30px 0 60px;
 }
 
-.outros h1{
+.outros h1 {
     text-align: center;
     font-size: 60px;
     margin-bottom: 50px;
     color: white;
 }
 
-.games{
+.games {
     width: 90%;
     margin: auto;
 
@@ -313,36 +314,36 @@ body {
     flex-wrap: wrap;
 }
 
-.game{
+.game {
     width: 240px;
     background-color: #ececec;
 
     transition: 0.3s;
 }
 
-.game:hover{
+.game:hover {
     transform: translateY(-10px);
 }
 
-.game img{
+.game img {
     width: 100%;
     height: 300px;
 
     object-fit: cover;
 }
 
-.info{
+.info {
     padding: 15px;
 }
 
-.info h2{
+.info h2 {
     font-size: 18px;
     margin: 0 0 10px;
     line-height: 1.4;
     color: #3a3a3a;
 }
 
-.info span{
+.info span {
     font-size: 16px;
     color: #6b6b6b;
 }
@@ -353,49 +354,49 @@ body {
     height: var(--tamanho-login);
 
     background-image:
-    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url('../IMGS/fdMario2.jpg');
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../IMGS/fdMario2.jpg');
 
     background-size: cover;
     background-position: center;
 }
 
 .titulo-form {
-  text-align: center;
-  margin-bottom: 20px;
-  color: white;
-  font-weight: 1000;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 1000;
 
-   text-shadow:
-    0 0 5px #fff,
-    0 0 40px #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 40px #fff;
 }
 
 .console .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
 }
 
 
 .corpo {
-    width: 70%; 
+    width: 70%;
     display: flex;
     min-height: 400px;
-    padding: 0; 
-    border-radius: 40px; 
-    overflow: visible; 
-    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    padding: 0;
+    border-radius: 40px;
+    overflow: visible;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
 
-    
+
 }
 
 .lado.esquerdo {
     width: 20%;
-    background-color: #00C3E3; 
-    border-radius: 40px 0 0 40px; 
+    background-color: #00C3E3;
+    border-radius: 40px 0 0 40px;
     border: 3px solid #3b82f6;
     box-shadow: 0 0 30px #00C3E3;
 
@@ -403,12 +404,12 @@ body {
 
 .centro {
     width: 60%;
-    background-color: #1a1a1a; 
+    background-color: #1a1a1a;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white; 
+    color: white;
     border: 3px solid black;
 
 }
@@ -416,7 +417,7 @@ body {
 .lado.direito {
     width: 20%;
     background-color: #E60012;
-    border-radius: 0 40px 40px 0; 
+    border-radius: 0 40px 40px 0;
     border: 3px solid #ff7a00;
     box-shadow: 0 0 30px #E60012;
 
@@ -424,43 +425,43 @@ body {
 
 
 .campo {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 5px 0;
 }
 
 .botao {
-  cursor: pointer;
-  font-family: "Barlow", sans-serif;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  color: #fff;
-  background-color: #ED145B;
-  width: 120px;
-  height: 30px;
-  align-self: center;
-  margin-top: 20px;
+    cursor: pointer;
+    font-family: "Barlow", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ED145B;
+    width: 120px;
+    height: 30px;
+    align-self: center;
+    margin-top: 20px;
 }
 
 
 .formulario {
-  display: flex;
-  flex-direction: column;
-  
+    display: flex;
+    flex-direction: column;
+
 }
 
 input {
-  margin-bottom: 10px;
-  border: 2px solid #32b9cd;
-  padding: 10px;
-  text-align: center;
-  border-radius: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #32b9cd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
 }
 
-#mensagem_erro{
+#mensagem_erro {
     margin-top: 15px;
 
     font-size: 15px;
@@ -471,33 +472,30 @@ input {
     min-height: 20px;
 }
 
-.erro{
+.erro {
     color: #ff4d4d;
 }
 
-.sucesso{
+.sucesso {
     color: #00ff88;
 }
 
 /* Perfil Gamer */
-.Gamer {
-    height: var(--tamanho-login);
 
-    background-image:
-    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url('../IMGS/fdMario2.jpg');
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-
-    padding-top: 20px;
-    padding-right: 10px;
+.navbarPerfil {
+    width: fit-content;
+    gap: 10px;
 }
 
+.paginaGame{
+    display: flex;
+    gap: 30px;
+
+    width: 95%;
+    margin: 30px auto;
+
+    align-items: flex-start;
+}
 
 .cardPerfil {
     width: 230px;
@@ -515,8 +513,10 @@ input {
 
     border-radius: 30px;
 
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
 }
+
 
 
 .fotoPerfil {
@@ -580,4 +580,100 @@ input {
 
     text-align: center;
     font-style: italic;
-}   
+}
+
+
+.listaJogos {
+    flex: 1;
+}
+
+.listaJogos h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+
+.gamesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+
+.cardGame {
+    width: 220px;
+
+    background-color: #ececec;
+
+    border: 4px solid black;
+
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+
+
+.cardGame img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+}
+
+.conteudoGame {
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.conteudoGame h2 {
+    font-size: 22px;
+    margin: 0;
+
+    color: #333;
+}
+
+.conteudoGame p {
+    margin: 0;
+    color: gray;
+}
+
+
+.btnFav {
+    height: 40px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #d9d9d9;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btnFav:hover {
+    background-color: #ffb3b3;
+}
+
+.btnFav.ativo {
+    background-color: #E60012;
+    color: white;
+}
+
+
+.conteudoGame select {
+    height: 38px;
+
+    border-radius: 10px;
+
+    border: 2px solid #ccc;
+
+    padding: 5px;
+}

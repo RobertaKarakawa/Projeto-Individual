@@ -24,8 +24,8 @@
                     <a href="/HTML/home.html">Home</a>
                 </li>
                 <li>
-            <a href="/HTML/dashboard.html">Dashboard</a>
-          </li>
+                    <a href="/HTML/dashboard.html">Dashboard</a>
+                </li>
                 <li>
                     <a href="/HTML/login.html">Login</a>
                 </li>
@@ -49,7 +49,7 @@
 
                 <div class="centro">
                     <div class="formulario">
-                    
+
 
                         <div class="campo">
                             <span>Nome de Usuário:</span>
@@ -71,7 +71,7 @@
                         <div id="mensagem_erro"></div>
                     </div>
                 </div>
-                
+
 
                 <div class="lado direito"></div>
             </div>
@@ -89,108 +89,108 @@
 
 <script>
 
-function cadastrar() {
+    function cadastrar() {
 
-    mensagem_erro.innerHTML = "";
+        mensagem_erro.innerHTML = "";
 
-    var nomeVar = nome_input.value;
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-    if (
-        nomeVar == "" ||
-        emailVar == "" ||
-        senhaVar == "" ||
-        confirmacaoSenhaVar == ""
-    ) {
+        if (
+            nomeVar == "" ||
+            emailVar == "" ||
+            senhaVar == "" ||
+            confirmacaoSenhaVar == ""
+        ) {
 
-        mensagem_erro.className = "erro";
-        mensagem_erro.innerHTML = "Preencha todos os campos!";
+            mensagem_erro.className = "erro";
+            mensagem_erro.innerHTML = "Preencha todos os campos!";
 
-        return false;
-
-    } else {
-
-        setInterval(sumirMensagem, 5000);
-    }
-
-    if (!emailVar.includes("@")) {
-
-        mensagem_erro.className = "erro";
-        mensagem_erro.innerHTML = "E-mail inválido!";
-
-        return false;
-    }
-
-    if (senhaVar != confirmacaoSenhaVar) {
-
-        mensagem_erro.className = "erro";
-        mensagem_erro.innerHTML = "As senhas não coincidem!";
-
-        return false;
-    }
-
-    console.log("FORM CADASTRO:", nomeVar);
-    console.log("FORM EMAIL:", emailVar);
-
-    fetch("/usuarios/cadastrar", {
-
-        method: "POST",
-
-        headers: {
-            "Content-Type": "application/json",
-        },
-
-        body: JSON.stringify({
-
-            nomeServer: nomeVar,
-            emailServer: emailVar,
-            senhaServer: senhaVar
-
-        }),
-
-    })
-
-    .then(function (resposta) {
-
-        console.log("resposta:", resposta);
-
-        if (resposta.ok) {
-
-            mensagem_erro.className = "sucesso";
-
-            mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-            setTimeout(() => {
-
-                window.location = "/HTML/login.html";
-
-            }, 2000);
+            return false;
 
         } else {
 
-            throw "Houve um erro ao tentar realizar o cadastro!";
+            setInterval(sumirMensagem, 5000);
         }
 
-    })
+        if (!emailVar.includes("@")) {
 
-    .catch(function (erro) {
+            mensagem_erro.className = "erro";
+            mensagem_erro.innerHTML = "E-mail inválido!";
 
-        console.log(`#ERRO: ${erro}`);
+            return false;
+        }
 
-        mensagem_erro.className = "erro";
-        mensagem_erro.innerHTML = "Erro ao realizar cadastro!";
-    });
+        if (senhaVar != confirmacaoSenhaVar) {
 
-    return false;
-}
+            mensagem_erro.className = "erro";
+            mensagem_erro.innerHTML = "As senhas não coincidem!";
 
-function sumirMensagem() {
+            return false;
+        }
 
-    mensagem_erro.innerHTML = "";
-}
+        console.log("FORM CADASTRO:", nomeVar);
+        console.log("FORM EMAIL:", emailVar);
+
+        fetch("/usuarios/cadastrar", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json",
+            },
+
+            body: JSON.stringify({
+
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+
+            }),
+
+        })
+
+            .then(function (resposta) {
+
+                console.log("resposta:", resposta);
+
+                if (resposta.ok) {
+
+                    mensagem_erro.className = "sucesso";
+
+                    mensagem_erro.innerHTML =
+                        "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                    setTimeout(() => {
+
+                        window.location = "/HTML/login.html";
+
+                    }, 2000);
+
+                } else {
+
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+
+            })
+
+            .catch(function (erro) {
+
+                console.log(`#ERRO: ${erro}`);
+
+                mensagem_erro.className = "erro";
+                mensagem_erro.innerHTML = "Erro ao realizar cadastro!";
+            });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+
+        mensagem_erro.innerHTML = "";
+    }
 
 </script>
 
