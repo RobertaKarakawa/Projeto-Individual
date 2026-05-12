@@ -10,6 +10,7 @@ require("dotenv").config({ path: caminho_env });
 var express = require("express");
 var cors = require("cors");
 var path = require("path");
+var jogosRouter = require("./ROUTES/jogos");
 var PORTA_APP = process.env.APP_PORT;
 var HOST_APP = process.env.APP_HOST;
 
@@ -26,6 +27,7 @@ app.get("/", function(req, res){
 
 app.use(cors());
 
+app.use("/jogos", jogosRouter);
 app.use("/usuarios", usuarioRouter);
 
 app.listen(PORTA_APP, function () {

@@ -42,6 +42,10 @@ CREATE TABLE biblioteca (
         CHECK (nota BETWEEN 1 AND 5)
 );
 
+ALTER TABLE biblioteca
+ADD CONSTRAINT uqUsuarioJogo
+UNIQUE (fkUsuario, fkJogo);
+
 SELECT j.nomeJogo, COUNT(*) AS totalFavoritos
 FROM biblioteca b
 JOIN jogo j ON b.fkJogo = j.idJogo
