@@ -722,3 +722,30 @@ font-weight: bold;
 
     padding: 5px;
 }
+
+.btnSalvar {
+    width: 90px;
+    height: 32px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #d9d9d9;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    align-self: center;
+
+    transition: 0.3s;
+}
+
+.btnSalvar:hover {
+    background-color: #7aa07c;
+}
+
+.btnSalvar.salvo {
+    background-color: #4CAF50;
+}

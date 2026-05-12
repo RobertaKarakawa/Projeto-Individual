@@ -29,670 +29,710 @@
 
   <div class="paginaGame">
 
-  
-  <div class="listaJogos">
 
-    <h1>GAME LIST</h1>
+    <div class="listaJogos">
 
-    <div class="gamesGrid">
+      <h1>GAME LIST</h1>
 
-      <!-- CARD -->
-      <div class="cardGame">
+      <div class="gamesGrid">
 
-        <img src="../IMGS/Animal-Crossing-New-Horizons.jpg">
+        <!-- CARD -->
+        <div class="cardGame" data-id="1">
 
-        <div class="conteudoGame">
+          <img src="../IMGS/Animal-Crossing-New-Horizons.jpg">
 
-          <h2>Animal Crossing: New Horizons</h2>
+          <div class="conteudoGame">
 
-          <p>Simulação de vida</p>
+            <h2>Animal Crossing: New Horizons</h2>
 
-          <button class="btnFav">♡ Favoritar</button>
+            <p>Simulação de vida</p>
 
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
+            <button class="btnFav">♡ Favoritar</button>
 
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+
+        <div class="cardGame" data-id="2">
+
+          <img src="../IMGS/odysse.jpg">
+
+          <div class="conteudoGame">
+
+            <h2>Super Mario Odyssey</h2>
+
+            <p>Plataforma 3D</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="3">
+
+          <img src="../IMGS/pokemon.jpeg">
+
+          <div class="conteudoGame">
+
+            <h2>Pokémon Legends: Arceus</h2>
+
+            <p>RPG</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="cardGame" data-id="4">
+
+          <img src="../IMGS/Nintendo_Switch_Sports_cover_art.jpg">
+
+          <div class="conteudoGame">
+
+            <h2>Nintendo Switch Sports</h2>
+
+            <p>Esporte</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="5">
+
+          <img src="../IMGS/jamboree.jpg">
+
+          <div class="conteudoGame">
+
+            <h2>Super Mario Party Jamboree</h2>
+
+            <p>Tabuleiro </p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="6">
+
+          <img src="../IMGS/hollow.webp">
+
+          <div class="conteudoGame">
+
+            <h2>Hollow Knight</h2>
+
+            <p>Indie / exploração</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="7">
+
+          <img src="../IMGS/kart.jpg">
+
+          <div class="conteudoGame">
+
+            <h2>Mario Kart 8 Deluxe</h2>
+
+            <p>Corrida</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="8">
+
+          <img src="../IMGS/cuphead.webp">
+
+          <div class="conteudoGame">
+
+            <h2>Cuphead</h2>
+
+            <p>Run and gun / plataforma</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="9">
+
+          <img src="../IMGS/fortnite.jpeg">
+
+          <div class="conteudoGame">
+
+            <h2>Fortnite</h2>
+
+            <p>Battle royale</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="10">
+
+          <img src="../IMGS/mine.jpeg">
+
+          <div class="conteudoGame">
+
+            <h2>Minecraft</h2>
+
+            <p>Sandbox / sobrevivência</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="11">
+
+          <img src="../IMGS/Captura de tela 2026-05-11 212410.png">
+
+          <div class="conteudoGame">
+
+            <h2>Overcooked! 2</h2>
+
+            <p>Cooperativo</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+
+        <div class="cardGame" data-id="12">
+
+          <img src="../IMGS/resident.jpg">
+
+          <div class="conteudoGame">
+
+            <h2>Resident Evil 4</h2>
+
+            <p>Survival horror</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="13">
+
+          <img src="../IMGS/stardew.jpeg">
+
+          <div class="conteudoGame">
+
+            <h2>Stardew Valley</h2>
+
+            <p>Simulação de vida / fazenda</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="14">
+
+          <img src="../IMGS/wonder.jpg">
+
+          <div class="conteudoGame">
+
+            <h2>Super Mario Bros. Wonder</h2>
+
+            <p>Plataforma 2D</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="cardGame" data-id="15">
+
+          <img src="../IMGS/Little_Nightmares_II_cover.jpg">
+
+          <div class="conteudoGame">
+
+            <h2>Little Nightmares II</h2>
+
+            <p>Suspense / puzzle</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="16">
+
+          <img src="../IMGS/terraria.jpeg">
+
+          <div class="conteudoGame">
+
+            <h2>Terraria</h2>
+
+            <p>Sandbox / sobrevivência</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="17">
+
+          <img src="../IMGS/naruto.jpg">
+
+          <div class="conteudoGame">
+
+            <h2>Naruto Shippuden: Ultimate Ninja Storm 4</h2>
+
+            <p>Luta / anime</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="18">
+
+          <img src="../IMGS/rdr.jpg">
+
+          <div class="conteudoGame">
+
+            <h2>Red Dead Redemption</h2>
+
+            <p>Ação e aventura / mundo aberto</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+
+        <div class="cardGame" data-id="19">
+
+          <img src="../IMGS/The_Legend_of_Zelda_Breath_of_the_Wild.jpg">
+
+          <div class="conteudoGame">
+
+            <h2>The Legend of Zelda: Breath of the Wild</h2>
+
+            <p>Ação / aventura</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
+
+        </div>
+
+        <div class="cardGame" data-id="20">
+
+          <img src="../IMGS/justDance.jpeg">
+
+          <div class="conteudoGame">
+
+            <h2>Just Dance 2025 Edition</h2>
+
+            <p>Ritmo / música</p>
+
+            <button class="btnFav">♡ Favoritar</button>
+
+            <select class="selectStatus">
+              <option value="Não iniciado">Não iniciado</option>
+              <option value="Jogando">Jogando</option>
+              <option value="Zerado">Zerado</option>
+              <option value="Platinado">Platinado</option>
+            </select>
+
+            <select class="selectNota">
+              <option value="">Nota</option>
+              <option value="1">⭐ 1</option>
+              <option value="2">⭐ 2</option>
+              <option value="3">⭐ 3</option>
+              <option value="4">⭐ 4</option>
+              <option value="5">⭐ 5</option>
+            </select>
+
+            <button class="btnSalvar" onclick="salvarJogo(this)">Salvar</button>
+
+          </div>
 
         </div>
 
       </div>
-
-  
-            <div class="cardGame">
-
-        <img src="../IMGS/odysse.jpg">
-
-        <div class="conteudoGame">
-
-          <h2>Super Mario Odyssey</h2>
-
-          <p>Plataforma 3D</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-            <div class="cardGame">
-
-        <img src="../IMGS/pokemon.jpeg">
-
-        <div class="conteudoGame">
-
-          <h2>Pokémon Legends: Arceus</h2>
-
-          <p>RPG</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-   
-
-            <div class="cardGame">
-
-        <img src="../IMGS/Nintendo_Switch_Sports_cover_art.jpg">
-
-        <div class="conteudoGame">
-
-          <h2>Nintendo Switch Sports</h2>
-
-          <p>Esporte</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-            <div class="cardGame">
-
-        <img src="../IMGS/jamboree.jpg">
-
-        <div class="conteudoGame">
-
-          <h2>Super Mario Party Jamboree</h2>
-
-          <p>Tabuleiro </p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-            <div class="cardGame">
-
-        <img src="../IMGS/hollow.webp">
-
-        <div class="conteudoGame">
-
-          <h2>Hollow Knight</h2>
-
-          <p>Indie / exploração</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-            <div class="cardGame">
-
-        <img src="../IMGS/kart.jpg">
-
-        <div class="conteudoGame">
-
-          <h2>Mario Kart 8 Deluxe</h2>
-
-          <p>Corrida</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-            <div class="cardGame">
-
-        <img src="../IMGS/cuphead.webp">
-
-        <div class="conteudoGame">
-
-          <h2>Cuphead</h2>
-
-          <p>Run and gun / plataforma</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-            <div class="cardGame">
-
-        <img src="../IMGS/fortnite.jpeg">
-
-        <div class="conteudoGame">
-
-          <h2>Fortnite</h2>
-
-          <p>Battle royale</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-            <div class="cardGame">
-
-        <img src="../IMGS/mine.jpeg">
-
-        <div class="conteudoGame">
-
-          <h2>Minecraft</h2>
-
-          <p>Sandbox / sobrevivência</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-        <div class="cardGame">
-
-        <img src="../IMGS/Captura de tela 2026-05-11 212410.png">
-
-        <div class="conteudoGame">
-
-          <h2>Overcooked! 2</h2>
-
-          <p>Cooperativo</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-
-        <div class="cardGame">
-
-        <img src="../IMGS/resident.jpg">
-
-        <div class="conteudoGame">
-
-          <h2>Resident Evil 4</h2>
-
-          <p>Survival horror</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-        <div class="cardGame">
-
-        <img src="../IMGS/stardew.jpeg">
-
-        <div class="conteudoGame">
-
-          <h2>Stardew Valley</h2>
-
-          <p>Simulação de vida / fazenda</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-      <div class="cardGame">
-
-        <img src="../IMGS/wonder.jpg">
-
-        <div class="conteudoGame">
-
-          <h2>Super Mario Bros. Wonder</h2>
-
-          <p>Plataforma 2D</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-  
-
-      <div class="cardGame">
-
-        <img src="../IMGS/Little_Nightmares_II_cover.jpg">
-
-        <div class="conteudoGame">
-
-          <h2>Little Nightmares II</h2>
-
-          <p>Suspense / puzzle</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-      <div class="cardGame">
-
-        <img src="../IMGS/terraria.jpeg">
-
-        <div class="conteudoGame">
-
-          <h2>Terraria</h2>
-
-          <p>Sandbox / sobrevivência</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-    <div class="cardGame">
-
-        <img src="../IMGS/naruto.jpg">
-
-        <div class="conteudoGame">
-
-          <h2>Naruto Shippuden: Ultimate Ninja Storm 4</h2>
-
-          <p>Luta / anime</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-        <div class="cardGame">
-
-        <img src="../IMGS/rdr.jpg">
-
-        <div class="conteudoGame">
-
-          <h2>Red Dead Redemption</h2>
-
-          <p>Ação e aventura / mundo aberto</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-
-          <div class="cardGame">
-
-        <img src="../IMGS/The_Legend_of_Zelda_Breath_of_the_Wild.jpg">
-
-        <div class="conteudoGame">
-
-          <h2>The Legend of Zelda: Breath of the Wild</h2>
-
-          <p>Ação / aventura</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
-               <div class="cardGame">
-
-        <img src="../IMGS/justDance.jpeg">
-
-        <div class="conteudoGame">
-
-          <h2>Just Dance 2025 Edition</h2>
-
-          <p>Ritmo / música</p>
-
-          <button class="btnFav">♡ Favoritar</button>
-
-          <select>
-            <option>Não iniciado</option>
-            <option>Jogando</option>
-            <option>Zerado</option>
-            <option>Platinado</option>
-          </select>
-
-          <select>
-            <option>Nota</option>
-            <option>⭐ 1</option>
-            <option>⭐ 2</option>
-            <option>⭐ 3</option>
-            <option>⭐ 4</option>
-            <option>⭐ 5</option>
-          </select>
-
-        </div>
-
-      </div>
-
     </div>
-</div>
 
 
-     <div class="cardPerfil">
+    <div class="cardPerfil">
 
       <div class="fotoPerfil"></div>
 
-      <h2>Player Arissa</h2>
+      <h2>Player <span id="b_usuario">usuário</span></h2>
 
       <p class="status">
         <span class="bolinha"></span>
@@ -709,27 +749,27 @@
 
       <div class="quizBanner">
 
-    <div class="textoQuiz">
+        <div class="textoQuiz">
 
-        <p>
+          <p>
             "Que tipo de jogador você é? Aventureiro ou competitivo?"<br><br>
             "Você sabe mesmo sobre seu jogo favorito?"
-        </p>
+          </p>
 
-        <h3>
+          <h3>
             Esses e muitos outros quizzes você encontra
             na aba “Quiz” do site!!
-        </h3>
+          </h3>
+
+        </div>
+
+        <img src="../IMGS/mario.png">
+
+      </div>
 
     </div>
 
-    <img src="../IMGS/mario.png">
-
-</div>
-
-    </div>
-
-</div>
+  </div>
 
   <div class="footer">
     <div class="container">
@@ -739,6 +779,10 @@
 </body>
 
 <script>
+
+  var idUsuario = sessionStorage.ID_USUARIO;
+
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
   const favoritos = document.querySelectorAll('.btnFav');
 
@@ -751,7 +795,69 @@
     });
 
   });
+  function salvarJogo(botao) {
 
+    const card = botao.closest('.cardGame');
+
+    const idJogo = card.dataset.id;
+
+    const favorito = card.querySelector('.btnFav')
+      .classList.contains('ativo');
+
+    const status = card.querySelector('.selectStatus').value;
+
+    let nota = card.querySelector('.selectNota').value;
+
+    if (nota == "") {
+      nota = null;
+    }
+
+    fetch("/jogos/salvar", {
+
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      body: JSON.stringify({
+
+        idUsuarioServer: idUsuario,
+        idUsuarioServer: idUsuario,
+        idJogoServer: idJogo,
+        favoritoServer: favorito,
+        statusServer: status,
+        notaServer: nota
+
+      })
+
+    })
+
+      .then(function (resposta) {
+
+        console.log("resposta:", resposta);
+
+        if (resposta.ok) {
+
+          botao.classList.add('salvo');
+
+          botao.innerHTML = "Salvo";
+
+        } else {
+
+          throw "Erro ao salvar jogo";
+
+        }
+
+      })
+
+      .catch(function (erro) {
+
+        console.log(`#ERRO: ${erro}`);
+
+      });
+
+  }
 </script>
 
 
