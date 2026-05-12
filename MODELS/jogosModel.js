@@ -31,6 +31,20 @@ function salvar(idUsuario, idJogo, favorito, status, nota) {
     return database.executar(instrucaoSql);
 }
 
+function listar(idUsuario) {
+
+    var instrucaoSql = `
+        SELECT *
+        FROM biblioteca
+        WHERE fkUsuario = ${idUsuario};
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
-    salvar
+    salvar,
+    listar
 };

@@ -47,6 +47,34 @@ function salvar(req, res) {
     }
 }
 
+function listar(req, res) {
+
+    var idUsuario = req.params.idUsuario;
+
+    jogosModel.listar(idUsuario)
+
+        .then(
+
+            function (resultado) {
+
+                res.json(resultado);
+
+            }
+
+        ).catch(
+
+            function (erro) {
+
+                console.log(erro);
+
+                res.status(500).json(erro.sqlMessage);
+
+            }
+
+        );
+}
+
 module.exports = {
-    salvar
+    salvar,
+    listar
 }

@@ -826,7 +826,6 @@
       body: JSON.stringify({
 
         idUsuarioServer: idUsuario,
-        idUsuarioServer: idUsuario,
         idJogoServer: idJogo,
         favoritoServer: favorito,
         statusServer: status,
@@ -860,6 +859,61 @@
 
       });
 
+  }
+
+  window.onload = carregarJogos;
+
+  function carregarJogos() {
+
+    var idUsuario = sessionStorage.ID_USUARIO;
+
+    fetch(`/jogos/listar/${idUsuario}`)
+
+      .then(function (resposta) {
+
+        return resposta.json();
+
+      })
+
+      .then(function (jogos) {
+
+        jogos.forEach(function (jogo) {
+
+          const card = document.querySelector(
+            `.cardGame[data-id="${jogo.fkJogo}"]`
+          );
+
+          if (card) {
+
+            if (jogo.favorito == 1) {
+
+              card.querySelector('.btnFav')
+                .classList.add('ativo');
+            }
+
+            card.querySelector('.selectStatus').value =
+              jogo.statusJogo;
+
+            if (jogo.nota != null) {
+
+              card.querySelector('.selectNota').value =
+                jogo.nota;
+            }
+
+            card.querySelector('.btnSalvar')
+              .classList.add('salvo');
+
+            card.querySelector('.btnSalvar')
+              .innerHTML = "Salvo";
+          }
+        });
+      })
+
+      .catch(function (erro) {
+
+        console.log(erro);
+
+      });
   }
 </script>
 

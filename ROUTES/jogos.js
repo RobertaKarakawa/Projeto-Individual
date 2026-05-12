@@ -10,4 +10,10 @@ router.post("/salvar", function (req, res) {
 
 });
 
+router.get("/listar/:idUsuario", function (req, res) {
+
+    jogosController.listar(req, res);
+
+});
+
 module.exports = router;
