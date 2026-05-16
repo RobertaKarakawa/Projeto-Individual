@@ -764,3 +764,117 @@ font-weight: bold;
 .btnSalvar.salvo {
     background-color: #4CAF50;
 }
+
+/* DASHBOARD */
+
+.tituloDashboard{
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.areaKpis{
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.kpi{
+    width: 220px;
+    height: 140px;
+
+    background-color: #1E1E1E;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    color: white;
+
+    border-left: 6px solid #E60012;
+
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+
+    transition: 0.3s;
+}
+
+.kpi:hover{
+    transform: scale(1.03);
+}
+
+.kpi h3{
+    margin: 0;
+    font-size: 20px;
+}
+
+.kpi p{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.kpi span{
+    font-size: 22px;
+    font-weight: bold;
+    color: #00C3E3;
+}
+
+.subtitulo{
+    color: white;
+    margin-left: 5%;
+    margin-top: 60px;
+    font-size: 38px;
+}
+
+.areaGraficos{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.graficoPrincipal{
+    background-color: #1E1E1E;
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+}
+
+.graficoPrincipal h2{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.graficosInferiores{
+    display: flex;
+    gap: 25px;
+
+    margin-bottom: 60px;
+}
+
+.graficoMenor{
+    width: 50%;
+
+    background-color: #1E1E1E;
+
+    border-radius: 25px;
+
+    padding: 25px;
+}
+
+.graficoMenor h2{
+    color: white;
+    margin-bottom: 20px;
+}
+
+canvas{
+    width: 100% !important;
+}

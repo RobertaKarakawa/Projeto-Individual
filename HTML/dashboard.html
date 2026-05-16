@@ -2,45 +2,443 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nintendo Switch | Página Inicial</title>
+  <title>Dashboard | Comunidade Gamer</title>
 
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="icon" href="../IMGS/icon.png">
+  <link rel="stylesheet" href="../CSS/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
-    <div class="header">
-      <div class="container">
-        <h1 class="titulo">Nintendo Switch</h1>
-        <ul class="navbar">
-          <li>
-            <a href="home.html">Home</a>
-          </li>
-          <li class="agora">
-            <a href="#">Dashboard</a>
-          </li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        
-        </ul>
-      </div>
-    </div>
-  
-      <div class="fundoHome"></div>
-  
-    <div class="footer">
-      <div class="container">
-        <h4>Espero que tenha gostado! &hearts;</h4>
-      </div>
-    </div>
-    
-  </body>
+<body onload="obterDados()">
 
+  <!-- HEADER -->
+  <div class="header">
+    <div class="container">
+
+      <h1 class="titulo">Nintendo Switch</h1>
+
+      <ul class="navbar">
+        <li>
+          <a href="home.html">Home</a>
+        </li>
+
+        <li class="agora">
+          <a href="#">Dashboard</a>
+        </li>
+
+        <li>
+          <a href="login.html">Login</a>
+        </li>
+
+        <li>
+          <a href="cadastro.html">Cadastro</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- TÍTULO -->
+  <h1 class="tituloDashboard">Dashboard da Comunidade Gamer</h1>
+
+  <!-- KPIS -->
+  <div class="areaKpis">
+
+    <div class="kpi">
+      <h3>⭐ Maior Nota</h3>
+      <p>Zelda TOTK</p>
+      <span>9.8</span>
+    </div>
+
+    <div class="kpi">
+      <h3>🔥 Mais Jogado</h3>
+      <p>Minecraft</p>
+      <span>12.4k jogadores</span>
+    </div>
+
+    <div class="kpi">
+      <h3>🏆 Mais Zerado</h3>
+      <p>Super Mario Odyssey</p>
+      <span>7.1k jogadores</span>
+    </div>
+
+    <div class="kpi">
+      <h3>💎 Mais Platinado</h3>
+      <p>Hollow Knight</p>
+      <span>3.8k platinas</span>
+    </div>
+
+    <div class="kpi">
+      <h3>❤️ Favorito da Comunidade</h3>
+      <p>Zelda BOTW</p>
+      <span>91% favoritamentos</span>
+    </div>
+
+    <div class="kpi">
+      <h3>👥 Novos Cadastros</h3>
+      <p>Último mês</p>
+      <span>+2.451 usuários</span>
+    </div>
+
+  </div>
+
+  <!-- SUBTÍTULO -->
+  <h2 class="subtitulo">Corrida dos Jogos</h2>
+
+  <!-- ÁREA DOS GRÁFICOS -->
+  <div class="areaGraficos">
+
+    <!-- GRÁFICO PRINCIPAL -->
+    <div class="graficoPrincipal">
+
+      <h2>Top 5 Ranking da Comunidade</h2>
+
+      <canvas id="graficoRanking"></canvas>
+
+    </div>
+
+    <!-- GRÁFICOS INFERIORES -->
+    <div class="graficosInferiores">
+
+      <div class="graficoMenor">
+
+        <h2>Top 10 Mais Jogados</h2>
+
+        <canvas id="graficoJogados"></canvas>
+
+      </div>
+
+      <div class="graficoMenor">
+
+        <h2>Top 10 Mais Queridinhos</h2>
+
+        <canvas id="graficoFavoritos"></canvas>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="container">
+      <h4>Espero que tenha gostado! &hearts;</h4>
+    </div>
+  </div>
+
+</body>
+
+<script>
+
+  // FUNÇÃO PRINCIPAL
+  function obterDados() {
+
+    // ==========================
+    // RANKING COMUNIDADE
+    // ==========================
+
+    fetch('/jogos/ranking')
+      .then(function (resposta) {
+        return resposta.json();
+      })
+      .then(function (dados) {
+        plotarGraficoRanking(dados);
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      });
+
+
+    // ==========================
+    // MAIS JOGADOS
+    // ==========================
+
+    fetch('/jogos/maisJogados')
+      .then(function (resposta) {
+        return resposta.json();
+      })
+      .then(function (dados) {
+        plotarGraficoJogados(dados);
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      });
+
+
+    // ==========================
+    // FAVORITOS
+    // ==========================
+
+    fetch('/jogos/favoritos')
+      .then(function (resposta) {
+        return resposta.json();
+      })
+      .then(function (dados) {
+        plotarGraficoFavoritos(dados);
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      });
+
+  }
+
+
+  // =====================================
+  // RANKING COMUNIDADE
+  // =====================================
+
+  function plotarGraficoRanking(dados) {
+
+    var jogos = [];
+    var notas = [];
+
+    for (var i = 0; i < dados.length; i++) {
+
+      jogos.push(dados[i].nomeJogo);
+      notas.push(dados[i].mediaNota);
+
+    }
+
+    var ctx = document.getElementById('graficoRanking').getContext('2d');
+
+    new Chart(ctx, {
+
+      type: 'bar',
+
+      data: {
+
+        labels: jogos,
+
+        datasets: [{
+
+          label: 'Nota da comunidade',
+
+          data: notas,
+
+          backgroundColor: '#E60012',
+
+          borderRadius: 10
+
+        }]
+      },
+
+      options: {
+
+        indexAxis: 'y',
+
+        responsive: true,
+
+        plugins: {
+
+          legend: {
+            labels: {
+              color: 'white'
+            }
+          }
+
+        },
+
+        scales: {
+
+          x: {
+            ticks: {
+              color: 'white'
+            },
+
+            grid: {
+              color: '#444'
+            }
+          },
+
+          y: {
+            ticks: {
+              color: 'white'
+            },
+
+            grid: {
+              color: '#444'
+            }
+          }
+
+        }
+
+      }
+
+    });
+
+  }
+
+
+  // =====================================
+  // MAIS JOGADOS
+  // =====================================
+
+  function plotarGraficoJogados(dados) {
+
+    var jogos = [];
+    var quantidade = [];
+
+    for (var i = 0; i < dados.length; i++) {
+
+      jogos.push(dados[i].nomeJogo);
+      quantidade.push(dados[i].quantidadeJogadores);
+
+    }
+
+    var ctx = document.getElementById('graficoJogados').getContext('2d');
+
+    new Chart(ctx, {
+
+      type: 'bar',
+
+      data: {
+
+        labels: jogos,
+
+        datasets: [{
+
+          label: 'Quantidade de jogadores',
+
+          data: quantidade,
+
+          backgroundColor: '#00C3E3',
+
+          borderRadius: 10
+
+        }]
+      },
+
+      options: {
+
+        responsive: true,
+
+        plugins: {
+
+          legend: {
+            labels: {
+              color: 'white'
+            }
+          }
+
+        },
+
+        scales: {
+
+          x: {
+            ticks: {
+              color: 'white'
+            },
+
+            grid: {
+              color: '#444'
+            }
+          },
+
+          y: {
+            ticks: {
+              color: 'white'
+            },
+
+            grid: {
+              color: '#444'
+            }
+          }
+
+        }
+
+      }
+
+    });
+
+  }
+
+
+  // =====================================
+  // FAVORITOS
+  // =====================================
+
+  function plotarGraficoFavoritos(dados) {
+
+    var jogos = [];
+    var favoritos = [];
+
+    for (var i = 0; i < dados.length; i++) {
+
+      jogos.push(dados[i].nomeJogo);
+      favoritos.push(dados[i].quantidadeFavoritos);
+
+    }
+
+    var ctx = document.getElementById('graficoFavoritos').getContext('2d');
+
+    new Chart(ctx, {
+
+      type: 'bar',
+
+      data: {
+
+        labels: jogos,
+
+        datasets: [{
+
+          label: 'Quantidade de favoritamentos',
+
+          data: favoritos,
+
+          backgroundColor: '#E60012',
+
+          borderRadius: 10
+
+        }]
+      },
+
+      options: {
+
+        responsive: true,
+
+        plugins: {
+
+          legend: {
+            labels: {
+              color: 'white'
+            }
+          }
+
+        },
+
+        scales: {
+
+          x: {
+            ticks: {
+              color: 'white'
+            },
+
+            grid: {
+              color: '#444'
+            }
+          },
+
+          y: {
+            ticks: {
+              color: 'white'
+            },
+
+            grid: {
+              color: '#444'
+            }
+          }
+
+        }
+
+      }
+
+    });
+
+  }
+
+</script>
 </html>
