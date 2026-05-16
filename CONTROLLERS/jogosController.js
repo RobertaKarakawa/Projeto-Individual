@@ -74,7 +74,64 @@ function listar(req, res) {
         );
 }
 
+
+function ranking(req, res){
+
+    jogosModel.ranking()
+    .then(function(resultado){
+        res.json(resultado);
+    })
+    .catch(function(erro){
+        console.log(erro);
+        res.status(500).json(erro.sqlMessage);
+    });
+
+}
+
+function maisJogados(req, res){
+
+    jogosModel.maisJogados()
+    .then(function(resultado){
+        res.json(resultado);
+    })
+    .catch(function(erro){
+        console.log(erro);
+        res.status(500).json(erro.sqlMessage);
+    });
+
+}
+
+function favoritos(req, res){
+
+    jogosModel.favoritos()
+    .then(function(resultado){
+        res.json(resultado);
+    })
+    .catch(function(erro){
+        console.log(erro);
+        res.status(500).json(erro.sqlMessage);
+    });
+
+}
+
+function kpis(req, res){
+
+    jogosModel.kpis()
+    .then(function(resultado){
+        res.json(resultado);
+    })
+    .catch(function(erro){
+        console.log(erro);
+        res.status(500).json(erro.sqlMessage);
+    });
+
+}
+
 module.exports = {
     salvar,
-    listar
+    listar,
+    ranking,
+    maisJogados,
+    favoritos,
+    kpis
 }
