@@ -11,6 +11,7 @@ var express = require("express");
 var cors = require("cors");
 var path = require("path");
 var jogosRouter = require("./ROUTES/jogos");
+var fotoRouter = require("./ROUTES/foto");
 var PORTA_APP = process.env.APP_PORT;
 var HOST_APP = process.env.APP_HOST;
 
@@ -29,6 +30,7 @@ app.use(cors());
 
 app.use("/jogos", jogosRouter);
 app.use("/usuarios", usuarioRouter);
+app.use("/foto", fotoRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`

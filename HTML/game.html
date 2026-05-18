@@ -733,7 +733,29 @@
 
     <div class="cardPerfil">
 
-      <div class="fotoPerfil"></div>
+      <div class="fotoPerfil">
+            <div class="imgContainer">
+
+    <img id="imgPerfil" src="../IMGS/EditarFoto.jpg">
+
+    <div class="overlayPerfil">
+        📷
+    </div>
+</div>
+
+<div class="opcoesFoto" id="opcoesFoto">
+
+  <img src="../IMGS/PerfilMario.jpeg" onclick="trocarFoto(this.src)">
+    <img src="../IMGS/perfilLuigi.png" onclick="trocarFoto(this.src)">
+    <img src="../IMGS/perfilPeach.jpeg" onclick="trocarFoto(this.src)">
+    <img src="../IMGS/perfilYoshi.jpg" onclick="trocarFoto(this.src)">
+    <img src="../IMGS/perfilLink.webp" onclick="trocarFoto(this.src)">
+    <img src="../IMGS/perfilZelda.webp" onclick="trocarFoto(this.src)">
+   
+
+</div>
+</div>
+
 
       <h2>Player <span id="b_usuario">usuário</span></h2>
 
@@ -782,6 +804,54 @@
 </body>
 
 <script>
+
+function trocarFoto(novaFoto) {
+
+    document.getElementById("imgPerfil").src = novaFoto;
+
+    fetch("/foto/salvarFoto", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+
+            fotoServer: novaFoto,
+            idUsuarioServer: sessionStorage.ID_USUARIO
+
+        })
+
+    })
+
+}
+
+function buscarFotoPerfil() {
+
+    var idUsuario = sessionStorage.ID_USUARIO;
+
+    fetch(`/foto/buscarFoto/${idUsuario}`)
+
+    .then(function(resposta){
+
+        return resposta.json();
+
+    })
+
+    .then(function(resultado){
+
+        if(resultado.length > 0){
+
+            document.getElementById("imgPerfil").src =
+                resultado[0].foto;
+
+        }
+
+    })
+
+}
 
   var idUsuario = sessionStorage.ID_USUARIO;
 
@@ -861,8 +931,12 @@
 
   }
 
-  window.onload = carregarJogos;
+window.onload = function() {
 
+    carregarJogos();
+    buscarFotoPerfil();
+
+}
   function carregarJogos() {
 
     var idUsuario = sessionStorage.ID_USUARIO;

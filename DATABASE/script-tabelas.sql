@@ -9,6 +9,14 @@ senha VARCHAR(255) NOT NULL,
 dataCadastro DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE foto (
+    idFoto INT PRIMARY KEY AUTO_INCREMENT,
+    fotoPerfil VARCHAR(255),
+    fkUsuario INT UNIQUE,
+    CONSTRAINT fkPerfilUsuario
+        FOREIGN KEY (fkUsuario)
+        REFERENCES usuario(idUsuario)
+);
 
 CREATE TABLE jogo (
     idJogo INT PRIMARY KEY AUTO_INCREMENT,
