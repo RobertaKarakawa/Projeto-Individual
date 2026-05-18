@@ -1081,3 +1081,29 @@ input {
 canvas {
     width: 100% !important;
 }
+
+.header {
+    position: relative;
+}
+
+.perfilHeader {
+
+    position: absolute;
+
+    right: 30px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.perfilHeader img {
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 3px solid #E60012;
+
+    object-fit: cover;
+}

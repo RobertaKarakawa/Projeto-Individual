@@ -34,6 +34,12 @@
       </ul>
 
     </div>
+
+      <div class="perfilHeader">
+
+          <img id="fotoHeader" src="../IMGS/EditarFoto.jpg">
+
+        </div>
   </div>
 
   <h1 class="tituloDashboard">Dashboard da Comunidade Gamer</h1>
@@ -123,6 +129,33 @@
 
 <script>
 
+  buscarFotoHeader();
+
+function buscarFotoHeader() {
+
+    var idUsuario = sessionStorage.ID_USUARIO;
+
+    fetch(`/foto/buscarFoto/${idUsuario}`)
+
+    .then(function(resposta){
+
+        return resposta.json();
+
+    })
+
+    .then(function(resultado){
+
+        if(resultado.length > 0){
+
+            document.getElementById("fotoHeader").src =
+            resultado[0].foto;
+
+        }
+
+    })
+
+}
+
   function obterDados() {
 
     fetch('/jogos/ranking')
@@ -161,7 +194,7 @@
         console.log(erro);
       });
 
-   
+
     fetch('/jogos/kpis')
       .then(function (resposta) {
         return resposta.json();
@@ -220,7 +253,7 @@
   }
 
 
-  
+
   function plotarGraficoRanking(dados) {
 
     var jogos = [];
