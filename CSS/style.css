@@ -88,19 +88,82 @@ body {
 
 .hero {
     height: 100vh;
-    background: url("../IMGS/nintendo.avif");
+
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
+        url("../IMGS/nintendo.avif");
+
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-
 
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
 
-
+    position: relative;
 }
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at top right, rgba(230, 0, 18, 0.35), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(0, 195, 227, 0.2), transparent 30%);
+}
+
+.hero-conteudo {
+    width: 700px;
+
+    margin-left: 100px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-conteudo span {
+    color: #E60012;
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+.hero-conteudo h1 {
+    color: white;
+    font-size: 78px;
+    line-height: 1.05;
+
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.hero-conteudo p {
+    color: #d6d6d6;
+    font-size: 24px;
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+}
+
+.hero-conteudo a {
+    text-decoration: none;
+
+    background: #E60012;
+    color: white;
+
+    padding: 18px 40px;
+
+    border-radius: 50px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-conteudo a:hover {
+    background: white;
+    color: #E60012;
+}
+
 
 .card {
     width: 1300px;
@@ -113,10 +176,20 @@ body {
     display: flex;
     align-items: center;
     gap: 30px;
+    border-radius: 25px;
 
     overflow: hidden;
     box-shadow: 0 0 25px #E60012;
 
+    transition: 0.4s;
+
+    background-color: #111;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 0 40px #E60012;
 }
 
 .imagem img {
@@ -164,7 +237,16 @@ body {
 
     overflow: hidden;
     box-shadow: 0 0 25px #E60012;
+    transition: 0.4s;
+    border-radius: 20px;
 
+    background-color: #111;
+}
+
+.switch:hover {
+    transform: translateY(-12px) scale(1.03);
+
+    box-shadow: 0 0 40px #E60012;
 }
 
 .switch img {
@@ -203,6 +285,14 @@ body {
     align-items: center;
     overflow: hidden;
     box-shadow: 0 0 25px #E60012;
+    transition: 0.5s;
+    border-radius: 30px;
+}
+
+.sensor:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 0 45px #E60012;
 }
 
 .sensor img {
@@ -253,6 +343,7 @@ body {
     height: 620px;
 
     border: 3px solid #32b9cd;
+    border-radius: 25px;
 
     padding: 30px;
 
@@ -265,9 +356,18 @@ body {
 .card-jogo img {
     width: 700px;
     height: 620px;
+    border-radius: 20px;
 
     object-fit: cover;
     box-shadow: 0 0 25px #00C3E3;
+    transition: 0.5s;
+
+}
+
+.card-jogo img:hover {
+    transform: scale(1.03);
+
+    box-shadow: 0 0 40px #00C3E3;
 }
 
 .texto-card {
@@ -290,7 +390,6 @@ body {
 .reverso {
     flex-direction: row-reverse;
 }
-
 
 .outros {
     width: 100%;
@@ -487,7 +586,7 @@ input {
     gap: 10px;
 }
 
-.paginaGame{
+.paginaGame {
     display: flex;
     gap: 30px;
 
@@ -610,27 +709,27 @@ input {
 
 }
 
-.textoQuiz p{
+.textoQuiz p {
 
-font-style: italic;
+    font-style: italic;
 
 }
 
-.textoQuiz a{
+.textoQuiz a {
 
-color: #111;
-text-decoration: none;
+    color: #111;
+    text-decoration: none;
 
-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .textoQuiz a:hover {
     text-decoration: underline;
 }
 
-.textoQuiz h3{
+.textoQuiz h3 {
 
-font-weight: bold;
+    font-weight: bold;
 
 }
 
@@ -767,7 +866,7 @@ font-weight: bold;
 
 /* DASHBOARD */
 
-.tituloDashboard{
+.tituloDashboard {
     color: white;
     text-align: center;
     font-size: 45px;
@@ -775,7 +874,7 @@ font-weight: bold;
     margin-bottom: 40px;
 }
 
-.areaKpis{
+.areaKpis {
     width: 90%;
     margin: auto;
 
@@ -786,7 +885,7 @@ font-weight: bold;
     gap: 20px;
 }
 
-.kpi{
+.kpi {
     width: 220px;
     height: 140px;
 
@@ -800,45 +899,45 @@ font-weight: bold;
 
     border-left: 6px solid #E60012;
 
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 
     transition: 0.3s;
 }
 
-.kpi:hover{
+.kpi:hover {
     transform: scale(1.03);
 }
 
-.kpi h3{
+.kpi h3 {
     margin: 0;
     font-size: 20px;
 }
 
-.kpi p{
+.kpi p {
     margin-top: 20px;
     font-size: 18px;
 }
 
-.kpi span{
+.kpi span {
     font-size: 22px;
     font-weight: bold;
     color: #00C3E3;
 }
 
-.subtitulo{
+.subtitulo {
     color: white;
     margin-left: 5%;
     margin-top: 60px;
     font-size: 38px;
 }
 
-.areaGraficos{
+.areaGraficos {
     width: 90%;
     margin: auto;
     margin-top: 30px;
 }
 
-.graficoPrincipal{
+.graficoPrincipal {
     background-color: #1E1E1E;
 
     border-radius: 25px;
@@ -848,19 +947,19 @@ font-weight: bold;
     margin-bottom: 30px;
 }
 
-.graficoPrincipal h2{
+.graficoPrincipal h2 {
     color: white;
     margin-bottom: 20px;
 }
 
-.graficosInferiores{
+.graficosInferiores {
     display: flex;
     gap: 25px;
 
     margin-bottom: 60px;
 }
 
-.graficoMenor{
+.graficoMenor {
     width: 50%;
 
     background-color: #1E1E1E;
@@ -870,11 +969,11 @@ font-weight: bold;
     padding: 25px;
 }
 
-.graficoMenor h2{
+.graficoMenor h2 {
     color: white;
     margin-bottom: 20px;
 }
 
-canvas{
+canvas {
     width: 100% !important;
 }
