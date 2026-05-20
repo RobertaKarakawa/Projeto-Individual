@@ -35,11 +35,11 @@
 
     </div>
 
-      <div class="perfilHeader">
+    <div class="perfilHeader">
 
-          <img id="fotoHeader" src="../IMGS/EditarFoto.jpg">
+      <img id="fotoHeader" src="../IMGS/EditarFoto.jpg">
 
-        </div>
+    </div>
   </div>
 
   <h1 class="tituloDashboard">Dashboard da Comunidade Gamer</h1>
@@ -118,6 +118,39 @@
 
   </div>
 
+  <h1 class="tituloDashboard">
+    Área PRO
+  </h1>
+
+  <div class="areaSwitch">
+
+
+    <div class="graficoPizza">
+
+      <h2>Seu Progresso nos Jogos</h2>
+
+      <canvas id="graficoStatus"></canvas>
+
+    </div>
+
+
+    <div class="cardPreco">
+
+      <h2>Melhor Oferta Hoje</h2>
+
+      <div class="cardMelhorPreco"></div>
+
+    </div>
+
+    <div class="graficoPreco">
+
+      <h2>Comparação de Preços</h2>
+
+      <canvas id="graficoPreco"></canvas>
+
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <div class="footer">
     <div class="container">
@@ -131,30 +164,30 @@
 
   buscarFotoHeader();
 
-function buscarFotoHeader() {
+  function buscarFotoHeader() {
 
     var idUsuario = sessionStorage.ID_USUARIO;
 
     fetch(`/foto/buscarFoto/${idUsuario}`)
 
-    .then(function(resposta){
+      .then(function (resposta) {
 
         return resposta.json();
 
-    })
+      })
 
-    .then(function(resultado){
+      .then(function (resultado) {
 
-        if(resultado.length > 0){
+        if (resultado.length > 0) {
 
-            document.getElementById("fotoHeader").src =
+          document.getElementById("fotoHeader").src =
             resultado[0].foto;
 
         }
 
-    })
+      })
 
-}
+  }
 
   function obterDados() {
 
@@ -204,6 +237,27 @@ function buscarFotoHeader() {
       })
       .catch(function (erro) {
         console.log(erro);
+      });
+
+    fetch('/switch/melhorPreco')
+      .then(function (resposta) {
+        return resposta.json();
+      })
+
+      .then(function (dados) {
+        exibirMelhorPreco(dados);
+        plotarGraficoPreco(dados);
+
+      });
+
+    var idUsuario = sessionStorage.ID_USUARIO;
+
+    fetch(`/switch/status/${idUsuario}`)
+      .then(function (resposta) {
+        return resposta.json();
+      })
+      .then(function (dados) {
+        plotarGraficoStatus(dados);
       });
 
   }
@@ -485,6 +539,180 @@ function buscarFotoHeader() {
             grid: {
               color: '#444'
             }
+          }
+
+        }
+
+      }
+
+    });
+
+  }
+
+  function exibirMelhorPreco(dados) {
+
+    var loja = dados[0];
+
+    document.querySelector('.cardMelhorPreco')
+      .innerHTML = `
+
+        <h3>${loja.nome}</h3>
+
+        <p>R$ ${loja.preco}</p>
+
+        <a href="${loja.site}"
+           target="_blank">
+
+           Ir para loja
+
+        </a>
+
+    `;
+
+  }
+
+  function plotarGraficoPreco(dados) {
+
+    var lojas = [];
+    var precos = [];
+
+    for (var i = 0; i < dados.length; i++) {
+
+      lojas.push(dados[i].nome);
+
+      precos.push(dados[i].preco);
+
+    }
+
+    var ctx =
+      document.getElementById('graficoPreco')
+        .getContext('2d');
+
+    new Chart(ctx, {
+
+      type: 'bar',
+
+      data: {
+
+        labels: lojas,
+
+        datasets: [{
+
+          label: 'Preço do Nintendo Switch',
+
+          data: precos,
+
+          backgroundColor: '#E60012',
+
+          borderRadius: 10
+
+        }]
+
+      },
+
+      options: {
+
+        responsive: true,
+
+        plugins: {
+
+          legend: {
+
+            labels: {
+              color: 'white'
+            }
+
+          }
+
+        },
+
+        scales: {
+
+          x: {
+
+            ticks: {
+              color: 'white'
+            },
+
+            grid: {
+              color: '#444'
+            }
+
+          },
+
+          y: {
+
+            ticks: {
+              color: 'white'
+            },
+
+            grid: {
+              color: '#444'
+            }
+
+          }
+
+        }
+
+      }
+
+    });
+
+  }
+
+  function plotarGraficoStatus(dados) {
+
+    var status = [];
+    var quantidade = [];
+
+    for (var i = 0; i < dados.length; i++) {
+
+      status.push(dados[i].statusJogo);
+      quantidade.push(dados[i].quantidade);
+
+    }
+
+    var ctx =
+      document.getElementById('graficoStatus')
+        .getContext('2d');
+
+    new Chart(ctx, {
+
+      type: 'pie',
+
+      data: {
+
+        labels: status,
+
+        datasets: [{
+
+          data: quantidade,
+
+          backgroundColor: [
+
+            '#E60012',
+            '#00C3E3',
+            '#43B047',
+            '#ffb000'
+
+          ]
+
+        }]
+
+      },
+
+      options: {
+
+        responsive: true,
+
+        plugins: {
+
+          legend: {
+
+            labels: {
+              color: 'white'
+            }
+
           }
 
         }

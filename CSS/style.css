@@ -1107,3 +1107,149 @@ canvas {
 
     object-fit: cover;
 }
+
+.areaSwitch {
+
+    width: 90%;
+
+    margin: auto;
+
+    display: flex;
+
+    gap: 25px;
+
+    align-items: stretch;
+
+    margin-bottom: 60px;
+
+    flex-wrap: wrap;
+
+}
+
+.graficoPizza {
+
+    flex: 1;
+
+    min-width: 350px;
+
+    background-color: #1E1E1E;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+}
+
+.graficoPizza h2 {
+
+    color: white;
+
+    margin-bottom: 20px;
+
+}
+
+.cardPreco {
+
+    flex: 1;
+
+    min-width: 300px;
+
+    background-color: #1E1E1E;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    color: white;
+
+}
+
+.cardPreco h2 {
+
+    margin-bottom: 25px;
+
+}
+
+.graficoStatus {
+
+    max-height: 350px;
+
+}
+
+.cardMelhorPreco {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-top: 20px;
+
+}
+
+.cardMelhorPreco h3 {
+
+    font-size: 30px;
+
+    margin: 0;
+
+    color: #00C3E3;
+
+}
+
+.cardMelhorPreco p {
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    margin: 0;
+
+    color: white;
+
+}
+
+.cardMelhorPreco a {
+
+    width: fit-content;
+
+    padding: 12px 20px;
+
+    background-color: #E60012;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+
+}
+
+.cardMelhorPreco a:hover {
+
+    transform: scale(1.05);
+
+}
+
+.graficoPreco {
+
+    width: 100%;
+
+    background-color: #1E1E1E;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+}
+
+.graficoPreco h2 {
+
+    color: white;
+
+    margin-bottom: 20px;
+
+}
