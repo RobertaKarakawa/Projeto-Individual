@@ -549,16 +549,40 @@
 
   }
 
-  function exibirMelhorPreco(dados) {
+function exibirMelhorPreco(dados) {
+
+    var soma = 0;
+
+    for(var i = 0; i < dados.length; i++) {
+
+        soma += Number(dados[i].preco);
+
+    }
+
+    var media = soma / dados.length;
 
     var loja = dados[0];
 
+    var economia = media - loja.preco;
+
+    var porcentagem =
+    (economia / media) * 100;
+
     document.querySelector('.cardMelhorPreco')
-      .innerHTML = `
+    .innerHTML = `
 
         <h3>${loja.nome}</h3>
 
-        <p>R$ ${loja.preco}</p>
+        <p class="precoSwitch">
+            R$ ${loja.preco}
+        </p>
+
+        <span class="porcentagem">
+
+            📉 ${porcentagem.toFixed(1)}%
+            abaixo da média
+
+        </span>
 
         <a href="${loja.site}"
            target="_blank">
@@ -569,8 +593,7 @@
 
     `;
 
-  }
-
+}
   function plotarGraficoPreco(dados) {
 
     var lojas = [];

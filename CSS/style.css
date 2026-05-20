@@ -1029,10 +1029,13 @@ input {
 }
 
 .subtitulo {
+
     color: white;
-    margin-left: 5%;
+    text-align: center;
     margin-top: 60px;
+    margin-bottom: 20px;
     font-size: 38px;
+
 }
 
 .areaGraficos {
@@ -1251,5 +1254,17 @@ canvas {
     color: white;
 
     margin-bottom: 20px;
+
+}
+
+.porcentagem {
+
+    display: block;
+
+    color: #00C3E3;
+
+    margin-top: 8px;
+
+    font-size: 16px;
 
 }

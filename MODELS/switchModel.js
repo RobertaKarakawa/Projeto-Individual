@@ -1,6 +1,6 @@
 var database = require("../database/config");
 
-function melhorPreco(){
+function melhorPreco() {
 
     var instrucaoSql = `
 
@@ -18,7 +18,7 @@ function melhorPreco(){
 }
 
 
-function status(idUsuario){
+function status(idUsuario) {
 
     var instrucaoSql = `
 
@@ -27,7 +27,23 @@ function status(idUsuario){
         COUNT(*) AS quantidade
         FROM biblioteca
         WHERE fkUsuario = ${idUsuario}
-        GROUP BY statusJogo;
+        GROUP BY statusJogo
+
+        UNION ALL
+
+        SELECT
+        'Não iniciado' AS statusJogo,
+        (
+            SELECT COUNT(*)
+            FROM jogo
+        )
+        -
+        (
+            SELECT COUNT(*)
+            FROM biblioteca
+            WHERE fkUsuario = ${idUsuario}
+        )
+        AS quantidade;
 
     `;
 
