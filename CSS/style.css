@@ -169,7 +169,7 @@ body {
     width: 1300px;
     height: 350px;
 
-    border: 3px solid #E60012;
+    border: 2px solid #E60012;
 
     margin: 50px auto;
 
@@ -233,7 +233,7 @@ body {
 .switch {
     width: 320px;
     text-align: center;
-    border: 3px solid #E60012;
+    border: 2px solid #E60012;
 
     overflow: hidden;
     box-shadow: 0 0 25px #E60012;
@@ -275,7 +275,7 @@ body {
     width: 1100px;
     height: auto;
 
-    border: 3px solid #E60012;
+    border: 2px solid #E60012;
 
 
     margin: 50px auto;
@@ -331,18 +331,66 @@ body {
     gap: 60px;
 }
 
-.jogos h1 {
-    font-size: 60px;
+.tituloJogos {
+
+    text-align: center;
+
+    margin-top: 80px;
+
+}
+
+.tituloJogos span {
+
+    color: #00C3E3;
+
+    letter-spacing: 4px;
+
+    font-size: 16px;
+
     font-weight: bold;
-    margin: 0;
+
+    text-transform: uppercase;
+
+    display: block;
+
+    margin-bottom: 8px;
+
+}
+
+.tituloJogos h1 {
+
+    font-size: 60px;
+
     color: white;
+
+    margin: 0;
+
+    text-shadow:
+        0 0 18px rgba(230,0,18,0.35);
+
+}
+
+.tituloJogos p {
+
+    color: #d0d0d0;
+
+    font-size: 22px;
+
+    width: 900px;
+
+    margin: auto;
+
+    line-height: 1.6;
+
+    margin-top: 30px;
+
 }
 
 .card-jogo {
     width: 1300px;
     height: 620px;
 
-    border: 3px solid #32b9cd;
+    border: 2px solid #32b9cd;
     border-radius: 25px;
 
     padding: 30px;
@@ -401,6 +449,8 @@ body {
     font-size: 60px;
     margin-bottom: 50px;
     color: white;
+    text-shadow:
+        0 0 15px rgba(230,0,18,0.5);
 }
 
 .games {
@@ -447,6 +497,472 @@ body {
     color: #6b6b6b;
 }
 
+
+/* COMUNIDADE */
+
+.comunidade {
+
+    width: 90%;
+
+    margin: 100px auto;
+
+}
+
+.tituloComunidade {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.tituloComunidade span {
+
+    color: #00C3E3;
+
+    letter-spacing: 4px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+}
+
+.tituloComunidade h1 {
+
+    color: white;
+
+    font-size: 58px;
+
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 15px rgba(230,0,18,0.5);
+
+}
+
+.tituloComunidade p {
+
+    color: #d0d0d0;
+
+    font-size: 22px;
+
+    width: 900px;
+
+    margin: auto;
+
+    line-height: 1.6;
+
+}
+
+.tituloComunidade a {
+
+    display: inline-block;
+
+    margin-top: 35px;
+
+    background: white;
+
+    color: #111;
+
+    text-decoration: none;
+
+    padding: 18px 40px;
+
+    border-radius: 60px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    transition: 0.4s;
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.25);
+
+}
+
+
+
+.cardsComunidade {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 30px;
+
+}
+
+.cardComunidade {
+
+    background: linear-gradient(145deg, #1a1a1a, #111);
+
+    border: 2px solid rgba(255,255,255,0.08);
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    transition: 0.4s;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-color: #E60012;
+
+    box-shadow:
+        0 0 25px rgba(230,0,18,0.35);
+
+}
+
+.cardComunidade h2 {
+
+    color: white;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+    position: relative;
+    z-index: 2;
+
+}
+
+.cardComunidade p {
+
+    color: #d6d6d6;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    position: relative;
+    z-index: 2;
+
+}
+
+
+.gameList {
+
+    width: 90%;
+
+    margin: 120px auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+}
+
+.gameListTexto {
+
+    width: 45%;
+
+}
+
+.gameListTexto span {
+
+    color: #00C3E3;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+}
+
+.gameListTexto h1 {
+
+    color: white;
+
+    font-size: 65px;
+
+    line-height: 1.1;
+
+    margin: 20px 0;
+
+}
+
+.gameListTexto p {
+
+    color: #d0d0d0;
+
+    font-size: 22px;
+
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+
+}
+
+.gameListTexto a {
+
+    background: #E60012;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 18px 35px;
+
+    border-radius: 50px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 20px rgba(230,0,18,0.4);
+
+}
+
+
+
+.gameListCards {
+
+    width: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+.miniCard {
+
+    background: linear-gradient(145deg, #1a1a1a, #111);
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    border-color: #00C3E3;
+
+    box-shadow:
+        0 0 25px rgba(0,195,227,0.3);
+
+}
+
+
+.miniCard h2 {
+
+    color: white;
+
+    margin-bottom: 15px;
+
+}
+
+.miniCard p {
+
+    color: #d0d0d0;
+
+    line-height: 1.6;
+
+}
+
+.areaPro {
+
+    width: 100%;
+
+    padding: 120px 0;
+
+    position: relative;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.92)),
+        url("../IMGS/nintendo.avif");
+
+    background-size: cover;
+
+    background-position: center;
+
+    overflow: hidden;
+
+}
+
+.overlayPro {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(230,0,18,0.25), transparent 30%),
+
+        radial-gradient(circle at bottom right,
+        rgba(0,195,227,0.2), transparent 30%);
+}
+
+.conteudoPro {
+
+    width: 90%;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+}
+
+.conteudoPro span {
+
+    color: #00C3E3;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+}
+
+.conteudoPro h1 {
+
+    color: white;
+
+    font-size: 70px;
+
+    margin: 20px 0;
+
+}
+
+.conteudoPro p {
+
+    color: #d6d6d6;
+
+    font-size: 24px;
+
+    width: 900px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+}
+
+.proCards {
+
+    margin-top: 70px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+.proCard {
+
+    width: 320px;
+
+    background: rgba(255,255,255,0.05);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    transition: 0.4s;
+
+}
+
+
+.proCard h2 {
+
+    color: white;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+}
+
+.proCard p {
+
+    width: 100%;
+
+    font-size: 18px;
+
+}
+
+.finalHome {
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+}
+
+.finalHome h1 {
+
+    color: white;
+
+    font-size: 70px;
+
+    line-height: 1.3;
+
+    margin-bottom: 50px;
+
+    text-shadow:
+        0 0 20px rgba(230,0,18,0.4);
+
+}
+
+.finalHome a {
+
+    background: linear-gradient(90deg, #E60012, #ff3b30);
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 22px 45px;
+
+    border-radius: 60px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    transition: 0.4s;
+
+    box-shadow:
+        0 0 30px rgba(230,0,18,0.45);
+
+}
+
+.finalHome a:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+
 /* LOGIN E CADASTRO */
 
 .console {
@@ -454,7 +970,7 @@ body {
 
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../IMGS/fdMario2.jpg');
+        url('../IMGS/ChatGPT\ Image\ 21\ de\ mai.\ de\ 2026\,\ 00_20_17.png');
 
     background-size: cover;
     background-position: center;
@@ -937,6 +1453,8 @@ input {
     color: white;
     font-size: 50px;
     margin-bottom: 30px;
+    text-shadow:
+        0 0 20px rgba(230,0,18,0.4);
 }
 
 
