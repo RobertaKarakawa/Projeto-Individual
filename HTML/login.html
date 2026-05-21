@@ -25,8 +25,8 @@
                     <a href="/HTML/home.html">Home</a>
                 </li>
                 <li>
-            <a href="/HTML/dashboard.html">Dashboard</a>
-          </li>
+                    <a href="/HTML/dashboard.html">Dashboard</a>
+                </li>
                 <li class="agora">
                     <a href="#">Login</a>
                 </li>
@@ -45,11 +45,19 @@
 
             <div class="corpo">
 
-                <!-- LADO ESQUERDO -->
                 <div class="lado esquerdo">
+
+                    <div class="analogico"></div>
+
+                    <div class="botoes-esquerda">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
                 </div>
 
-                <!-- CENTRO (FORMULÁRIO) -->
                 <div class="centro">
 
                     <div class="formulario">
@@ -68,15 +76,30 @@
                     </div>
                 </div>
 
-                <!-- LADO DIREITO -->
                 <div class="lado direito">
+
+                    <div class="analogico direito"></div>
+
+                    <div class="botoes-direita">
+
+                        <span class="topo"></span>
+
+                        <div class="meio">
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span class="baixo"></span>
+
+                    </div>
+
                 </div>
 
             </div>
 
-            </div>
-
         </div>
+
+    </div>
 
 
 
@@ -92,102 +115,102 @@
 
 <script>
 
-function entrar() {
+    function entrar() {
 
-    mensagem_erro.innerHTML = "";
+        mensagem_erro.innerHTML = "";
 
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
 
-    if (emailVar == "" || senhaVar == "") {
+        if (emailVar == "" || senhaVar == "") {
 
-        mensagem_erro.className = "erro";
-        mensagem_erro.innerHTML = "Preencha todos os campos!";
+            mensagem_erro.className = "erro";
+            mensagem_erro.innerHTML = "Preencha todos os campos!";
 
-        return false;
-    }else {
+            return false;
+        } else {
 
-    setInterval(sumirMensagem, 5000);
-}
+            setInterval(sumirMensagem, 5000);
+        }
 
-    if (!emailVar.includes("@")) {
+        if (!emailVar.includes("@")) {
 
-        mensagem_erro.className = "erro";
-        mensagem_erro.innerHTML = "E-mail inválido!";
+            mensagem_erro.className = "erro";
+            mensagem_erro.innerHTML = "E-mail inválido!";
+
+            return false;
+        }
+
+        console.log("FORM LOGIN:", emailVar);
+        console.log("FORM SENHA:", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+
+        })
+
+            .then(function (resposta) {
+
+                console.log("ESTOU NO THEN DO entrar()!");
+                console.log("resposta:", resposta);
+
+                if (resposta.ok) {
+
+                    resposta.json().then(json => {
+
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nomeUsuario;
+                        sessionStorage.ID_USUARIO = json.idUsuario;
+
+                        mensagem_erro.className = "sucesso";
+                        mensagem_erro.innerHTML = "Login realizado com sucesso!";
+
+                        setTimeout(() => {
+
+                            window.location = "/HTML/game.html";
+
+                        }, 1000);
+
+                    });
+
+                } else {
+
+                    console.log("Houve um erro ao tentar realizar o login!");
+
+                    mensagem_erro.className = "erro";
+                    mensagem_erro.innerHTML = "E-mail ou senha inválidos!";
+                }
+
+            })
+
+            .catch(function (erro) {
+
+                console.log(`#ERRO: ${erro}`);
+
+                mensagem_erro.className = "erro";
+                mensagem_erro.innerHTML = "Erro no servidor!";
+            });
 
         return false;
     }
 
-    console.log("FORM LOGIN:", emailVar);
-    console.log("FORM SENHA:", senhaVar);
+    function sumirMensagem() {
 
-    fetch("/usuarios/autenticar", {
-
-        method: "POST",
-
-        headers: {
-            "Content-Type": "application/json"
-        },
-
-        body: JSON.stringify({
-            emailServer: emailVar,
-            senhaServer: senhaVar
-        })
-
-    })
-
-    .then(function (resposta) {
-
-        console.log("ESTOU NO THEN DO entrar()!");
-        console.log("resposta:", resposta);
-
-        if (resposta.ok) {
-
-            resposta.json().then(json => {
-
-                console.log(json);
-                console.log(JSON.stringify(json));
-
-                sessionStorage.EMAIL_USUARIO = json.email;
-                sessionStorage.NOME_USUARIO = json.nomeUsuario;
-                sessionStorage.ID_USUARIO = json.idUsuario;
-
-                mensagem_erro.className = "sucesso";
-                mensagem_erro.innerHTML = "Login realizado com sucesso!";
-
-                setTimeout(() => {
-
-                    window.location = "/HTML/game.html";
-
-                }, 1000);
-
-            });
-
-        } else {
-
-            console.log("Houve um erro ao tentar realizar o login!");
-
-            mensagem_erro.className = "erro";
-            mensagem_erro.innerHTML = "E-mail ou senha inválidos!";
-        }
-
-    })
-
-    .catch(function (erro) {
-
-        console.log(`#ERRO: ${erro}`);
-
-        mensagem_erro.className = "erro";
-        mensagem_erro.innerHTML = "Erro no servidor!";
-    });
-
-    return false;
-}
-
-function sumirMensagem() {
-
-    mensagem_erro.innerHTML = "";
-}
+        mensagem_erro.innerHTML = "";
+    }
 
 </script>
 

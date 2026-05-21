@@ -523,6 +523,142 @@ body {
 }
 
 
+.lado {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.analogico {
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle at 30% 30%, #555, #111);
+
+    border: 5px solid #222;
+
+    position: absolute;
+
+    top: 70px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        inset 0 0 10px rgba(255,255,255,0.15),
+        0 0 20px rgba(0,0,0,0.6);
+
+}
+
+.analogico.direito {
+
+    top: 220px;
+
+}
+
+
+.botoes-esquerda {
+
+    position: absolute;
+
+    bottom: 80px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90px;
+    height: 90px;
+
+}
+
+.botoes-esquerda span {
+
+    width: 24px;
+    height: 24px;
+
+    background-color: #111;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    box-shadow:
+        inset 0 0 5px rgba(255,255,255,0.2),
+        0 0 10px rgba(0,0,0,0.4);
+
+}
+
+.botoes-esquerda span:nth-child(1) {
+    top: 0;
+    left: 33px;
+}
+
+.botoes-esquerda span:nth-child(2) {
+    bottom: 0;
+    left: 33px;
+}
+
+.botoes-esquerda span:nth-child(3) {
+    left: 0;
+    top: 33px;
+}
+
+.botoes-esquerda span:nth-child(4) {
+    right: 0;
+    top: 33px;
+}
+
+
+.botoes-direita {
+
+    position: absolute;
+
+    top: 70px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+.botoes-direita span {
+
+    width: 24px;
+    height: 24px;
+
+    background-color: #111;
+
+    border-radius: 50%;
+
+    box-shadow:
+        inset 0 0 5px rgba(255,255,255,0.2),
+        0 0 10px rgba(0,0,0,0.4);
+
+}
+
+.meio {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
 .campo {
     display: flex;
     flex-direction: column;
@@ -601,7 +737,7 @@ input {
     height: 350px;
 
     position: sticky;
-    top: 20px; 
+    top: 20px;
 
     background-color: white;
 
@@ -658,7 +794,7 @@ input {
     position: absolute;
     inset: 0;
 
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
 
     display: flex;
     justify-content: center;
@@ -673,7 +809,7 @@ input {
 
 .fotoPerfil:hover .overlayPerfil {
     opacity: 1;
-    
+
 }
 
 .opcoesFoto {
@@ -692,13 +828,13 @@ input {
 
     width: 160px;
 
-    background-color: rgba(20,20,20,0.95);
+    background-color: rgba(20, 20, 20, 0.95);
 
     padding: 10px 15px;
 
     border-radius: 20px;
 
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 
     opacity: 0;
 
@@ -917,11 +1053,25 @@ input {
 /* DASHBOARD */
 
 .tituloDashboard {
+
     color: white;
+
     text-align: center;
-    font-size: 45px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+
+    font-size: 52px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-top: 50px;
+    margin-bottom: 45px;
+
+    position: relative;
+
+    text-shadow:
+        0 0 10px rgba(230,0,18,0.5);
+
 }
 
 .areaKpis {
@@ -974,15 +1124,6 @@ input {
     color: #00C3E3;
 }
 
-.subtitulo {
-
-    color: white;
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    font-size: 38px;
-
-}
 
 .areaGraficos {
     width: 90%;
@@ -1001,8 +1142,15 @@ input {
 }
 
 .graficoPrincipal h2 {
+    
+    font-size: 32px;
     color: white;
     margin-bottom: 20px;
+    text-shadow:
+    0 0 10px rgba(230,0,18,0.4);
+    text-transform: uppercase;
+    
+
 }
 
 .graficosInferiores {
@@ -1010,6 +1158,7 @@ input {
     gap: 25px;
 
     margin-bottom: 60px;
+    
 }
 
 .graficoMenor {
@@ -1025,6 +1174,8 @@ input {
 .graficoMenor h2 {
     color: white;
     margin-bottom: 20px;
+    text-transform: uppercase;
+
 }
 
 canvas {
@@ -1067,53 +1218,91 @@ canvas {
 
     gap: 25px;
 
-    align-items: stretch;
-
     margin-bottom: 60px;
 
-    flex-wrap: wrap;
+    align-items: stretch;
+
+}
+
+.colunaEsquerda {
+
+    width: 32%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
 
 }
 
 .graficoPizza {
 
-    flex: 1;
-
-    min-width: 350px;
-
     background-color: #1E1E1E;
 
     border-radius: 25px;
 
-    padding: 25px;
+    padding: 20px;
+
+    height: 320px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+     display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.graficoPizza canvas {
+
+    max-height: 220px !important;
 
 }
 
 .graficoPizza h2 {
 
     color: white;
-
+    text-transform: uppercase;
     margin-bottom: 20px;
 
 }
 
 .cardPreco {
 
-    flex: 1;
-
-    min-width: 300px;
-
     background-color: #1E1E1E;
 
     border-radius: 25px;
 
-    padding: 25px;
+    padding: 20px;
 
     color: white;
+
+    height: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
 
 }
 
 .cardPreco h2 {
+    text-transform: uppercase;
 
     margin-bottom: 25px;
 
@@ -1131,9 +1320,9 @@ canvas {
 
     flex-direction: column;
 
-    gap: 20px;
+    align-items: center;
 
-    margin-top: 20px;
+    gap: 15px;
 
 }
 
@@ -1185,22 +1374,48 @@ canvas {
 
 .graficoPreco {
 
-    width: 100%;
+    flex: 1;
 
     background-color: #1E1E1E;
 
     border-radius: 25px;
 
-    padding: 25px;
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+#graficoPreco {
+
+    flex: 1 !important;
+
+}
+
+.graficoPreco canvas {
+
+    width: 100% !important;
+
+    height: 100% !important;
 
 }
 
 .graficoPreco h2 {
 
     color: white;
+    text-transform: uppercase;
 
     margin-bottom: 20px;
+     display: flex;
 
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
 }
 
 .porcentagem {

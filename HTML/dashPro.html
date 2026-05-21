@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Dashboard | Comunidade Gamer</title>
+  <title>Dashboard Pro | Comunidade Gamer</title>
 
   <link rel="stylesheet" href="../CSS/style.css">
   <link rel="icon" href="../IMGS/icon.png">
@@ -84,8 +84,6 @@
 
   </div>
 
-  <h2 class="subtitulo">Corrida dos Jogos</h2>
-
   <div class="areaGraficos">
 
     <div class="graficoPrincipal">
@@ -124,21 +122,23 @@
 
   <div class="areaSwitch">
 
+    <div class="colunaEsquerda">
 
-    <div class="graficoPizza">
+      <div class="graficoPizza">
 
-      <h2>Seu Progresso nos Jogos</h2>
+        <h2>Seu Progresso nos Jogos</h2>
 
-      <canvas id="graficoStatus"></canvas>
+        <canvas id="graficoStatus"></canvas>
 
-    </div>
+      </div>
 
+      <div class="cardPreco">
 
-    <div class="cardPreco">
+        <h2>Melhor Oferta Hoje</h2>
 
-      <h2>Melhor Oferta Hoje</h2>
+        <div class="cardMelhorPreco"></div>
 
-      <div class="cardMelhorPreco"></div>
+      </div>
 
     </div>
 
@@ -149,6 +149,7 @@
       <canvas id="graficoPreco"></canvas>
 
     </div>
+
   </div>
 
   <!-- FOOTER -->
@@ -336,8 +337,15 @@
 
           data: notas,
 
-          backgroundColor: '#E60012',
+          backgroundColor: [
 
+            '#E60012',
+            '#00C3E3',
+            '#43B047',
+            '#ffb000',
+            '#9b59b6'
+
+          ],
           borderRadius: 10
 
         }]
@@ -549,13 +557,13 @@
 
   }
 
-function exibirMelhorPreco(dados) {
+  function exibirMelhorPreco(dados) {
 
     var soma = 0;
 
-    for(var i = 0; i < dados.length; i++) {
+    for (var i = 0; i < dados.length; i++) {
 
-        soma += Number(dados[i].preco);
+      soma += Number(dados[i].preco);
 
     }
 
@@ -566,10 +574,10 @@ function exibirMelhorPreco(dados) {
     var economia = media - loja.preco;
 
     var porcentagem =
-    (economia / media) * 100;
+      (economia / media) * 100;
 
     document.querySelector('.cardMelhorPreco')
-    .innerHTML = `
+      .innerHTML = `
 
         <h3>${loja.nome}</h3>
 
@@ -593,7 +601,7 @@ function exibirMelhorPreco(dados) {
 
     `;
 
-}
+  }
   function plotarGraficoPreco(dados) {
 
     var lojas = [];
@@ -625,7 +633,7 @@ function exibirMelhorPreco(dados) {
 
           data: precos,
 
-          backgroundColor: '#E60012',
+          backgroundColor: '#ffb000',
 
           borderRadius: 10
 
