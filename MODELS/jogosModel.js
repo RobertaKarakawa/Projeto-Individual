@@ -76,7 +76,7 @@ function favoritos(){
 
         SELECT 
             jogo.nomeJogo,
-            COUNT(DISTINCT biblioteca.fkJogo) AS quantidadeFavoritos
+            COUNT(biblioteca.fkJogo) AS quantidadeFavoritos
         FROM biblioteca
         JOIN jogo
             ON biblioteca.fkJogo = jogo.idJogo
